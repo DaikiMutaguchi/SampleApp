@@ -11,7 +11,7 @@ struct TabBView: View {
     var body: some View {
         Image("Obake.png")
             .resizable()
-            .frame(width: 420.0, height: 800.0, alignment: .leading)
+            .frame(width: 380.0, height: 700.0, alignment: .leading)
     }
 }
 

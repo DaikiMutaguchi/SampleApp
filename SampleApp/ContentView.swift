@@ -9,29 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            TabAView()
+        
+        TabView {                   //テーブルビューの宣言
+            TabAView()              //リストタブの表示
                 .tabItem {
                     VStack {
-                        Image(systemName: "a")
-                        Text("TabA")
+                        Image(systemName: "list.bullet")
+                        Text("ToDoリスト")
                     }
             }.tag(1)
-            TabBView()
+            
+            
+            TabBView()              //お化け表示画面の設定
                 .tabItem {
                     VStack {
-                        Image(systemName: "bold")
-                        Text("TabB")
+                        Image(systemName: "eyes")
+                        Text("お化け図鑑")
                     }
             }.tag(2)
-            TabCView()
+            
+            
+            TabCView()              //時間割アプリの表示
                 .tabItem {
                     VStack {
-                        Image("c.png")
-                        Text("TabC")
+                        Image(systemName: "tablecells")
+                        Text("My時間割")
                     }
             }.tag(3)
-        }
+        }.accentColor(.blue)
     }
 }
 

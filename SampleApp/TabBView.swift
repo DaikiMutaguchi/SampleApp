@@ -9,12 +9,14 @@ import SwiftUI
 
 struct TabBView: View {
     var body: some View {
-        Text("This is Tab B.")
+        Image("Obake.png")
+            .resizable()
+            .frame(width: 420.0, height: 800.0, alignment: .leading)
     }
 }
 
-struct TabAView_Previews: PreviewProvider {
+struct TabBView_Previews: PreviewProvider {
     static var previews: some View {
-        TabAView()
+        TabBView()
     }
 }

@@ -10,13 +10,14 @@ import SwiftUI
 struct TabAView: View {
     var body: some View {
         NavigationView {
-            List(0 ..< 10) { item in
-                NavigationLink(destination: Text("Destination")/*@END_MENU_TOKEN@*/) { /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Navigate") }
-                
-            }.navigationTitle("Aのタブだよ")
+            List(1..<10) { index in
+                            NavigationLink(destination: Text("\(index)番目のView")) {
+                                Text("\(index)行目")
+                            }
+                        }.navigationTitle("Aのタブだよ")
+            }
         }
     }
-}
 
 struct TabAView_Previews: PreviewProvider {
     static var previews: some View {

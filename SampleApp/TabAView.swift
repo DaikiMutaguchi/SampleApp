@@ -11,10 +11,10 @@ struct TabAView: View {
     var body: some View {
         NavigationView {
             List(1..<10) { index in
-                            NavigationLink(destination: Text("\(index)番目のView")) {
-                                Text("\(index)行目")
-                            }
-                        }.navigationTitle("Aのタブだよ")
+                            NavigationLink(destination:
+                                         Text("遷移先画面")){ Text("\(index)行目")
+                                        }
+                        }.navigationTitle("ToDoリストにしたい")
             }
         }
     }

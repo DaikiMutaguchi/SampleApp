@@ -13,7 +13,7 @@ struct TabCView: View {
             List(0 ..< 10) { item in
                 NavigationLink(destination: Text("Destination")/*@END_MENU_TOKEN@*/) { /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Navigate") }
                 
-            }.navigationTitle("ここはテーブル表示")
+            }.navigationTitle("時間割表示したい")
         }
     }
 }

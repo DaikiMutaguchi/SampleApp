@@ -9,13 +9,34 @@ import SwiftUI
 
 struct TabCView: View {
     var body: some View {
-        NavigationView {
-            List(0 ..< 5) { item in
-                NavigationLink(destination: Text("Destination")/*@END_MENU_TOKEN@*/) { /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Navigate") }
+           NavigationView {
+               NavigationLink(destination: TabAView()) {
                 
-            }.navigationTitle("時間割表示したい")
-        }
-    }
+                HStack{
+                   ZStack {
+                       Image("TbBG")
+                           .resizable()
+                           .frame(width: 70, height: 130)
+                        Text("演習")
+                    
+                    
+                   }
+                    
+                    ZStack {
+                        Image("TbBG")
+                            .resizable()
+                            .frame(width: 70, height: 130)
+                         Text("演習")
+                     
+                     
+                    }
+                    
+                }
+               }
+                   .navigationTitle("My時間割")
+           }
+       }
+    
 }
 
 struct TabCView_Previews: PreviewProvider {

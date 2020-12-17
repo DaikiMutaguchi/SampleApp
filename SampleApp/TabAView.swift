@@ -14,7 +14,7 @@ struct TabAView: View {
                             NavigationLink(destination:
                                          Text("遷移先画面")){ Text("\(index)行目")
                                         }
-                        }.navigationTitle("ToDoリストにしたい")
+                        }.navigationTitle("ToDoリスト")
             }
         }
     }

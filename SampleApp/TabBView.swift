@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabBView: View {
+struct ObakeView: View {
     var body: some View {
         Image("Obake.png")
             .resizable()
@@ -17,6 +17,6 @@ struct TabBView: View {
 
 struct TabBView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBView()
+        ObakeView()
     }
 }

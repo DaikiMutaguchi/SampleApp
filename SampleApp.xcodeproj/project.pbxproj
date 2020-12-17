@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		529BA3BD258B1BB900719DC2 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BA3BC258B1BB900719DC2 /* File.swift */; };
 		52E76F8E2589BCD7000B24C0 /* SampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76F8D2589BCD7000B24C0 /* SampleAppApp.swift */; };
 		52E76F902589BCD7000B24C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76F8F2589BCD7000B24C0 /* ContentView.swift */; };
 		52E76F922589BCD8000B24C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E76F912589BCD8000B24C0 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		529BA3BC258B1BB900719DC2 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		52E76F8A2589BCD7000B24C0 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E76F8D2589BCD7000B24C0 /* SampleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppApp.swift; sourceTree = "<group>"; };
 		52E76F8F2589BCD7000B24C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				52E76F9D2589BDFD000B24C0 /* TabAView.swift */,
 				52E76FA02589BE1D000B24C0 /* TabBView.swift */,
 				52E76FA72589C431000B24C0 /* TabCView.swift */,
-				529BA3BC258B1BB900719DC2 /* File.swift */,
 				52E76F912589BCD8000B24C0 /* Assets.xcassets */,
 				52E76F962589BCD8000B24C0 /* Info.plist */,
 				52E76F932589BCD8000B24C0 /* Preview Content */,
@@ -151,7 +148,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E76FA82589C431000B24C0 /* TabCView.swift in Sources */,
-				529BA3BD258B1BB900719DC2 /* File.swift in Sources */,
 				52E76FA12589BE1D000B24C0 /* TabBView.swift in Sources */,
 				52E76F9E2589BDFD000B24C0 /* TabAView.swift in Sources */,
 				52E76F902589BCD7000B24C0 /* ContentView.swift in Sources */,

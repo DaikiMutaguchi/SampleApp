@@ -58,8 +58,8 @@
 		52E76F8C2589BCD7000B24C0 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				52E76F8D2589BCD7000B24C0 /* SampleAppApp.swift */,
 				52E76F8F2589BCD7000B24C0 /* ContentView.swift */,
+				52E76F8D2589BCD7000B24C0 /* SampleAppApp.swift */,
 				52E76F9D2589BDFD000B24C0 /* TabAView.swift */,
 				52E76FA02589BE1D000B24C0 /* TabBView.swift */,
 				52E76FA72589C431000B24C0 /* TabCView.swift */,

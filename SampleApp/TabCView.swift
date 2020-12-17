@@ -24,6 +24,7 @@ struct TabCView: View {
                     
                    }
                     
+                    
                     ZStack {
                         Image("TbBG")
                             .resizable()

@@ -19,6 +19,15 @@ struct TabCView: View {
                 //各曜日の５限分のコマ配置
                 //月曜日
                 VStack{
+                    
+                    ZStack {
+                        Image("Youbi")
+                            .resizable()
+                            .frame(width: 65, height: 20)
+                         Text("月")
+                        
+                    }
+                    
                    ZStack {
                        Image("TbBG")
                            .resizable()
@@ -67,6 +76,13 @@ struct TabCView: View {
                     
                     //火曜日
                     VStack{
+                        
+                        ZStack {
+                            Image("Youbi")
+                                .resizable()
+                                .frame(width: 65, height: 20)
+                             Text("火")
+                        }
                        ZStack {
                            Image("TbBG")
                                .resizable()
@@ -113,6 +129,13 @@ struct TabCView: View {
                     
                     //水曜日
                     VStack{
+                        
+                        ZStack {
+                            Image("Youbi")
+                                .resizable()
+                                .frame(width: 65, height: 20)
+                             Text("水")
+                        }
                        ZStack {
                            Image("TbBG")
                                .resizable()
@@ -159,6 +182,13 @@ struct TabCView: View {
                     
                     //木曜日
                     VStack{
+                        
+                        ZStack {
+                            Image("Youbi")
+                                .resizable()
+                                .frame(width: 65, height: 20)
+                             Text("木")
+                        }
                        ZStack {
                            Image("TbBG")
                                .resizable()
@@ -205,6 +235,12 @@ struct TabCView: View {
                     
                     //金曜日
                     VStack{
+                        ZStack {
+                            Image("Youbi")
+                                .resizable()
+                                .frame(width: 65, height: 20)
+                             Text("金")
+                        }
                        ZStack {
                            Image("TbBG")
                                .resizable()

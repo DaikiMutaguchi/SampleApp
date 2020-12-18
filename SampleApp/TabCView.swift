@@ -13,29 +13,245 @@ struct TabCView: View {
            NavigationView {VStack {
                     
                NavigationLink(destination: TBDataView()) {
-                
+                //横に時間割列を配置
                 HStack{
+                    
+                //各曜日の５限分のコマ配置
+                //月曜日
+                VStack{
                    ZStack {
                        Image("TbBG")
                            .resizable()
-                           .frame(width: 70, height: 130)
-                        Text("システム論")
-                    
+                           .frame(width: 65, height: 100)
+                        Text("あいう")
                     
                    }
-                    
-                    
                     ZStack {
                         Image("TbBG")
                             .resizable()
-                            .frame(width: 70, height: 130)
+                            .frame(width: 65, height: 100)
                          Text("演習")
                      
                      
                     }
+                    ZStack {
+                        Image("TbBG")
+                            .resizable()
+                            .frame(width: 65, height: 100)
+                         Text("演習")
+                     
+                     
+                    }
+                    ZStack {
+                        Image("TbBG")
+                            .resizable()
+                            .frame(width: 65, height: 100)
+                         Text("演習")
+                     
+                     
+                    }
+                    ZStack {
+                        Image("TbBG")
+                            .resizable()
+                            .frame(width: 65, height: 100)
+                         Text("演習")
+                    }
+                    
+                    
+                    
+                }
+                //月曜日終了
+                    
+                    
+                    
+                    
+                    //火曜日
+                    VStack{
+                       ZStack {
+                           Image("TbBG")
+                               .resizable()
+                               .frame(width: 65, height: 100)
+                            Text("簿記")
+                        
+                       }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                         
+                         
+                        }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                         
+                         
+                        }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                         
+                         
+                        }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                        }
+                        
+                        
+                        
+                    }
+                    //火曜日終了
+                    
+                    
+                    //水曜日
+                    VStack{
+                       ZStack {
+                           Image("TbBG")
+                               .resizable()
+                               .frame(width: 65, height: 100)
+                            Text("簿記")
+                        
+                       }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                         
+                         
+                        }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                         
+                         
+                        }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                         
+                         
+                        }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                        }
+                        
+                        
+                        
+                    }
+                    //水曜日終了
+                    
+                    
+                    //木曜日
+                    VStack{
+                       ZStack {
+                           Image("TbBG")
+                               .resizable()
+                               .frame(width: 65, height: 100)
+                            Text("簿記")
+                        
+                       }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                         
+                         
+                        }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                         
+                         
+                        }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                         
+                         
+                        }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                        }
+                        
+                        
+                        
+                    }
+                    //木曜日終了
+                    
+                    
+                    //金曜日
+                    VStack{
+                       ZStack {
+                           Image("TbBG")
+                               .resizable()
+                               .frame(width: 65, height: 100)
+                            Text("簿記")
+                        
+                       }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                         
+                         
+                        }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                         
+                         
+                        }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                         
+                         
+                        }
+                        ZStack {
+                            Image("TbBG")
+                                .resizable()
+                                .frame(width: 65, height: 100)
+                             Text("演習")
+                        }
+                        
+                        
+                        
+                    }
+                    //金曜日終了
                     
                 }
                }
+               
+               
                    .navigationTitle("My時間割")
            }
        }
@@ -53,39 +269,76 @@ struct TabCView_Previews: PreviewProvider {
 
 struct TBDataView: View {
     
-    @State var name : String = ""
-    @State var message : String = ""
-    @State var editting = false
+    @State var subname : String = ""
+    @State var submessage : String = ""
+    @State var subeditting = false
+    
+    @State var clname : String = ""
+    @State var clmessage : String = ""
+    @State var cleditting = false
     
     
     var body: some View {
         VStack {
-            TextField("名前を入力して下さい", text: $name,
+            //入力テキスト表示エリア
+            Text(verbatim: submessage)
+            Text(verbatim: clmessage)
+            //テキスト終了
+            
+            
+            //テキストフィールド設定
+            TextField("科目名を入力して下さい", text: $subname,
                       
                 onEditingChanged: { begin in
                     /// 入力開始処理
                     if begin {
-                        self.editting = true    // 編集フラグをオン
-                        self.message = ""       // メッセージをクリア
+                        self.subeditting = true    // 編集フラグをオン
+                        self.submessage = ""       // メッセージをクリア
                             
                         /// 入力終了処理
                     } else {
-                        self.editting = false   // 編集フラグをオフ
+                        self.subeditting = false   // 編集フラグをオフ
                     }
                 },
  
                 /// リターンキーが押された時の処理
                 onCommit: {
-                    self.message = "月曜日１限：\(self.name)"   // メッセージセット
-                    self.name = ""  // 入力域をクリア
+                    self.submessage = "科目名：\(self.subname)"   // メッセージセット
+                    self.subname = ""  // 入力域をクリア
                     
                 })
                 .textFieldStyle(RoundedBorderTextFieldStyle()) // 入力域を枠で囲む
                 .padding()      // 余白を追加
                 // 編集フラグがONの時に枠に影を付ける
-                .shadow(color: editting ? .blue : .clear, radius: 3)
+                .shadow(color: subeditting ? .blue : .clear, radius: 3)
             
-            Text(verbatim: message)
+            
+            TextField("教室を入力して下さい", text: $clname,
+                      
+                onEditingChanged: { begin in
+                    /// 入力開始処理
+                    if begin {
+                        self.cleditting = true    // 編集フラグをオン
+                        self.clmessage = ""       // メッセージをクリア
+                            
+                        /// 入力終了処理
+                    } else {
+                        self.cleditting = false   // 編集フラグをオフ
+                    }
+                },
+ 
+                /// リターンキーが押された時の処理
+                onCommit: {
+                    self.clmessage = "教室：\(self.clname)"   // メッセージセット
+                    self.clname = ""  // 入力域をクリア
+                    
+                })
+                .textFieldStyle(RoundedBorderTextFieldStyle()) // 入力域を枠で囲む
+                .padding()      // 余白を追加
+                // 編集フラグがONの時に枠に影を付ける
+                .shadow(color: cleditting ? .blue : .clear, radius: 3)
+            //テキストフィールド設定終了
+            
         }
     }
 }
@@ -96,3 +349,4 @@ struct TBDataView_Previews: PreviewProvider {
         TBDataView()
         }
     }
+

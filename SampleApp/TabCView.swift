@@ -10,9 +10,11 @@ import SwiftUI
 struct TabCView: View {
     
     var body: some View {
-           NavigationView {VStack {
+        
+        //ナビゲーションビューの開始
+           NavigationView  {
                     
-               NavigationLink(destination: TBDataView()) {
+              
                 //横に時間割列を配置
                 HStack{
                     
@@ -27,7 +29,10 @@ struct TabCView: View {
                          Text("月")
                         
                     }
+               
                     
+                    
+                NavigationLink(destination: TBDataView()) {
                    ZStack {
                        Image("TbBG")
                            .resizable()
@@ -35,6 +40,7 @@ struct TabCView: View {
                         Text("あいう")
                     
                    }
+                }
                     ZStack {
                         Image("TbBG")
                             .resizable()
@@ -43,6 +49,7 @@ struct TabCView: View {
                      
                      
                     }
+                
                     ZStack {
                         Image("TbBG")
                             .resizable()
@@ -51,6 +58,7 @@ struct TabCView: View {
                      
                      
                     }
+                
                     ZStack {
                         Image("TbBG")
                             .resizable()
@@ -83,6 +91,8 @@ struct TabCView: View {
                                 .frame(width: 65, height: 20)
                              Text("火")
                         }
+                        
+                
                        ZStack {
                            Image("TbBG")
                                .resizable()
@@ -90,6 +100,7 @@ struct TabCView: View {
                             Text("簿記")
                         
                        }
+                    
                         ZStack {
                             Image("TbBG")
                                 .resizable()
@@ -285,21 +296,19 @@ struct TabCView: View {
                     //金曜日終了
                     
                 }
-               }
-               
-               
-                   .navigationTitle("My時間割")
+                .navigationTitle("My時間割")
+            }
+        
            }
        }
     
-}
+
 
 struct TabCView_Previews: PreviewProvider {
     static var previews: some View {
         TabCView()
         }
     }
-}
 
 
 

@@ -19,8 +19,7 @@ struct ContentView: View {
                     }
             }.tag(1)
             
-            
-            ObakeView()              //お化け表示画面の設定
+            TabBView()              //お化け表示画面の設定
                 .tabItem {
                     VStack {
                         Image(systemName: "eyes")

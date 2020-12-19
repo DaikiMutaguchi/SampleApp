@@ -10,22 +10,33 @@ import SwiftUI
 struct TabAView: View {
     @State private var toDo = "" //ユーザー入力
     @State private var buttonLabel = "" //ボタンに表示する
-    @State private var inputValue = "" //
+    @State private var message = "ここをリスト表示したい" //
     var body: some View {
-        
+
         NavigationView { //ナビゲーションビュー
+            Text(message)
+                .navigationBarTitle("ToDoリスト", displayMode: .automatic)
+                            .navigationBarItems(trailing:
+                                Button(action: {
+                                    self.message = "これ＋ボタンにしたいなあ"
+                                }) {
+                                    Image(systemName: "magnifyingglass")
+                                }
+
+                        )
             List(1..<2) { index in
                             NavigationLink(destination:
                                         Text("遷移先画面")){ Text("\(index)行目")
                                         }
-                
                 
                 VStack { //縦に並べます
                            TextField("ToDoを追加する", text: $toDo) //テキストフィールド設定
                                .textFieldStyle(RoundedBorderTextFieldStyle())  // 入力域のまわりを枠で囲む
                                .padding()  // 余白を追加
                 }
-            }.navigationTitle("ToDoリスト")//タイトル
+                
+            }
+            
             
             
             }

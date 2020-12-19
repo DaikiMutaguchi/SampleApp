@@ -19,14 +19,14 @@ struct TabCView: View {
                     
                     
                     
-                    ForEach((1...5), id: \.self) { Date in
+                    ForEach((0...4), id: \.self) { Date in
                         
                     VStack{
                         ZStack {
                             Image("Youbi")
                                 .resizable()
                                 .frame(width: 65, height: 20)
-                             Text("Youbi[\(Date-1)]")
+                             Text("Youbi[\(Date)]")
                         }
                         
                         ForEach((1...5), id: \.self) { time in
@@ -34,7 +34,7 @@ struct TabCView: View {
                                 Image("TbBG")
                                         .resizable()
                                         .frame(width: 65, height: 100)
-                                Text("\(time)")
+                                Text("\(Date*5+time)")
                                 }
                             }
                     }

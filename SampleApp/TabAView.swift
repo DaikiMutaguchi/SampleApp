@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct TabAView: View {
-    @State private var todo = ""
+    @State private var todo = "" //ユーザー入力
+    @State private var buttonLabel = "" //ボタンに表示する
+    @State private var inputValue = "" //
     var body: some View {
-        VStack {
-                   TextField("ToDoを追加する", text: $todo)
-                       .textFieldStyle(RoundedBorderTextFieldStyle())  // 入力域のまわりを枠で囲む
-                       .padding()  // 余白を追加
-                   Text("入力テスト：\(todo)")
-               }
-        NavigationView {
-            List(1..<10) { index in
+        
+        NavigationView { //ナビゲーションビュー
+            List(1..<3) { index in
                             NavigationLink(destination:
                                          Text("遷移先画面")){ Text("\(index)行目")
                                         }
-                        }.navigationTitle("ToDoリスト")
+                VStack { //縦に並べます
+                           TextField("ToDoを追加する", text: $todo) //テキストフィールド設定
+                               .textFieldStyle(RoundedBorderTextFieldStyle())  // 入力域のまわりを枠で囲む
+                               .padding()  // 余白を追加
+                    
+                       }
+                        }.navigationTitle("ToDoリスト")//タイトル
             }
         }
     }

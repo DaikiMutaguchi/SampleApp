@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-     //この画面は変更しなくて大丈夫！！
+     //このファイルは変更しなくて大丈夫！！
         
         TabView {                   //タブビューの宣言
             TabAView()              //TabAView.swiftの呼び出し

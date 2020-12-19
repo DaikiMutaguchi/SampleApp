@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabCView: View {
-    let Youbi = ["月", "火", "水", "木" , "金" ]
+   
     var body: some View {
         //ナビゲーションビューの開始
            NavigationView  {

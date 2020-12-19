@@ -22,6 +22,8 @@ struct TabCView: View {
                     ForEach((0...4), id: \.self) { Date in
                         
                     VStack{
+                        
+                        
                         ZStack {
                             Image("Youbi")
                                 .resizable()
@@ -30,18 +32,21 @@ struct TabCView: View {
                         }
                         
                         ForEach((1...5), id: \.self) { time in
+                            
+                        NavigationLink(destination:TBDataView()){
+                            
                             ZStack {
                                 Image("TbBG")
                                         .resizable()
                                         .frame(width: 65, height: 100)
                                 Text("\(Date*5+time)")
                                 }
+                                
+                                }
                             }
                     }
                         
-                    
-                }
-                    
+                    }
                     
                 }
                 .navigationTitle("My時間割")

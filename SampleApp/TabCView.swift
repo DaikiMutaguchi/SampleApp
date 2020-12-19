@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabCView: View {
-   
+    let Youbi = ["月" , "火" , "水" , "木" , "金"]
     var body: some View {
         //ナビゲーションビューの開始
            NavigationView  {
@@ -28,7 +28,7 @@ struct TabCView: View {
                             Image("Youbi")
                                 .resizable()
                                 .frame(width: 65, height: 20)
-                             Text("Youbi[\(Date)]")
+                            Text(Youbi[Date])
                         }
                         
                         ForEach((1...5), id: \.self) { time in

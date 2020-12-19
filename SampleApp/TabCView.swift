@@ -8,292 +8,40 @@
 import SwiftUI
 
 struct TabCView: View {
-    
+    let Youbi = ["月", "火", "水", "木" , "金" ]
     var body: some View {
-        
         //ナビゲーションビューの開始
            NavigationView  {
                     
-              
+            
                 //横に時間割列を配置
                 HStack{
                     
-                //各曜日の５限分のコマ配置
-                //月曜日
-                VStack{
                     
-                    ZStack {
-                        Image("Youbi")
-                            .resizable()
-                            .frame(width: 65, height: 20)
-                         Text("月")
+                    
+                    ForEach((1...5), id: \.self) { Date in
                         
+                    VStack{
+                        ZStack {
+                            Image("Youbi")
+                                .resizable()
+                                .frame(width: 65, height: 20)
+                             Text("Youbi[\(Date-1)]")
+                        }
+                        
+                        ForEach((1...5), id: \.self) { time in
+                            ZStack {
+                                Image("TbBG")
+                                        .resizable()
+                                        .frame(width: 65, height: 100)
+                                Text("\(time)")
+                                }
+                            }
                     }
-               
-                    
-                    
-                NavigationLink(destination: TBDataView()) {
-                   ZStack {
-                       Image("TbBG")
-                           .resizable()
-                           .frame(width: 65, height: 100)
-                        Text("あいう")
-                    
-                   }
-                }
-                    ZStack {
-                        Image("TbBG")
-                            .resizable()
-                            .frame(width: 65, height: 100)
-                         Text("演習")
-                     
-                     
-                    }
-                
-                    ZStack {
-                        Image("TbBG")
-                            .resizable()
-                            .frame(width: 65, height: 100)
-                         Text("演習")
-                     
-                     
-                    }
-                
-                    ZStack {
-                        Image("TbBG")
-                            .resizable()
-                            .frame(width: 65, height: 100)
-                         Text("演習")
-                     
-                     
-                    }
-                    ZStack {
-                        Image("TbBG")
-                            .resizable()
-                            .frame(width: 65, height: 100)
-                         Text("演習")
-                    }
-                    
-                    
+                        
                     
                 }
-                //月曜日終了
                     
-                    
-                    
-                    
-                    //火曜日
-                    VStack{
-                        
-                        ZStack {
-                            Image("Youbi")
-                                .resizable()
-                                .frame(width: 65, height: 20)
-                             Text("火")
-                        }
-                        
-                
-                       ZStack {
-                           Image("TbBG")
-                               .resizable()
-                               .frame(width: 65, height: 100)
-                            Text("簿記")
-                        
-                       }
-                    
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                         
-                         
-                        }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                         
-                         
-                        }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                         
-                         
-                        }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                        }
-                        
-                        
-                        
-                    }
-                    //火曜日終了
-                    
-                    
-                    //水曜日
-                    VStack{
-                        
-                        ZStack {
-                            Image("Youbi")
-                                .resizable()
-                                .frame(width: 65, height: 20)
-                             Text("水")
-                        }
-                       ZStack {
-                           Image("TbBG")
-                               .resizable()
-                               .frame(width: 65, height: 100)
-                            Text("簿記")
-                        
-                       }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                         
-                         
-                        }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                         
-                         
-                        }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                         
-                         
-                        }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                        }
-                        
-                        
-                        
-                    }
-                    //水曜日終了
-                    
-                    
-                    //木曜日
-                    VStack{
-                        
-                        ZStack {
-                            Image("Youbi")
-                                .resizable()
-                                .frame(width: 65, height: 20)
-                             Text("木")
-                        }
-                       ZStack {
-                           Image("TbBG")
-                               .resizable()
-                               .frame(width: 65, height: 100)
-                            Text("簿記")
-                        
-                       }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                         
-                         
-                        }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                         
-                         
-                        }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                         
-                         
-                        }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                        }
-                        
-                        
-                        
-                    }
-                    //木曜日終了
-                    
-                    
-                    //金曜日
-                    VStack{
-                        ZStack {
-                            Image("Youbi")
-                                .resizable()
-                                .frame(width: 65, height: 20)
-                             Text("金")
-                        }
-                       ZStack {
-                           Image("TbBG")
-                               .resizable()
-                               .frame(width: 65, height: 100)
-                            Text("簿記")
-                        
-                       }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                         
-                         
-                        }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                         
-                         
-                        }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                         
-                         
-                        }
-                        ZStack {
-                            Image("TbBG")
-                                .resizable()
-                                .frame(width: 65, height: 100)
-                             Text("演習")
-                        }
-                        
-                        
-                        
-                    }
-                    //金曜日終了
                     
                 }
                 .navigationTitle("My時間割")

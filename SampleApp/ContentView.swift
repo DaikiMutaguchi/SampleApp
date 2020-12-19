@@ -10,8 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        TabView {                   //テーブルビューの宣言
-            TabAView()              //リストタブの表示
+     //この画面は変更しなくて大丈夫！！
+        
+        TabView {                   //タブビューの宣言
+            TabAView()              //TabAView.swiftの呼び出し
                 .tabItem {
                     VStack {
                         Image(systemName: "list.bullet")
@@ -19,7 +21,7 @@ struct ContentView: View {
                     }
             }.tag(1)
             
-            TabBView()              //お化け表示画面の設定
+            TabBView()              //TabBView.swiftの呼び出し
                 .tabItem {
                     VStack {
                         Image(systemName: "eyes")
@@ -28,14 +30,14 @@ struct ContentView: View {
             }.tag(2)
             
             
-            TabCView()              //時間割アプリの表示
+            TabCView()              //TabCView.swiftの呼び出し
                 .tabItem {
                     VStack {
                         Image(systemName: "tablecells")
                         Text("My時間割")
                     }
             }.tag(3)
-        }.accentColor(.blue)
+        }.accentColor(.blue)       //タブバーの切替で青色にする
     }
 }
 

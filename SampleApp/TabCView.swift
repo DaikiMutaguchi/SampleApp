@@ -13,7 +13,7 @@ struct TabCView: View {
         //ナビゲーションビューの開始
            NavigationView  {
                     
-            
+            ScrollView(.vertical) { //縦画面サイズ調整(iPhone 8用)
                 //横に下のVStackを並べる
                 HStack{
                     
@@ -50,7 +50,9 @@ struct TabCView: View {
                     
                 }
                 .navigationTitle("My時間割")
-            }
+                }
+            
+           }
         
            }
        }

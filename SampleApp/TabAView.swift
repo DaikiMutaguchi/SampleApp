@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct TabAView: View {
+    @State private var todo = ""
     var body: some View {
+        VStack {
+                   TextField("ToDoを追加する", text: $todo)
+                       .textFieldStyle(RoundedBorderTextFieldStyle())  // 入力域のまわりを枠で囲む
+                       .padding()  // 余白を追加
+                   Text("入力テスト：\(todo)")
+               }
         NavigationView {
             List(1..<10) { index in
                             NavigationLink(destination:

@@ -14,21 +14,21 @@ struct TabCView: View {
            NavigationView  {
                     
             
-                //横に時間割列を配置
+                //横に下のVStackを並べる
                 HStack{
                     
                     
                     
-                    ForEach((0...4), id: \.self) { Date in
+                    ForEach((0...4), id: \.self) { Date in //曜日の
                         
-                    VStack{
+                    VStack{  //下のZStackを縦に表示
                         
                         
-                        ZStack {
+                        ZStack { //曜日のマスを表示
                             Image("Youbi")
                                 .resizable()
                                 .frame(width: 65, height: 20)
-                            Text(Youbi[Date])
+                            Text(Youbi[Date]) //配列Youbiの0~4番めの値表示
                         }
                         
                         ForEach((1...5), id: \.self) { time in

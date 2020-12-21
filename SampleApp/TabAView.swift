@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TabAView: View {
-       @State var messages: [String] = []
-       @State var newMessage = ""   //入力してもらう項目
+       @State var alist: [String] = []
+       @State var newalist = "alist"   //入力してもらう項目
        var body: some View {
            VStack(alignment: .leading) {
                VStack(alignment: .leading) {
@@ -17,10 +17,10 @@ struct TabAView: View {
                        .font(.footnote)
                        .foregroundColor(.gray)
                    HStack {
-                       TextField("ToDoを入力する", text: $newMessage).textFieldStyle(RoundedBorderTextFieldStyle())
+                       TextField("ToDoを入力する", text: $newalist).textFieldStyle(RoundedBorderTextFieldStyle())
                        Button(action: {
-                           self.messages.append(self.newMessage)
-                           self.newMessage = ""
+                           self.alist.append(self.newalist)
+                           self.newalist = ""
                        }) {
                            Text("Done")
                                .buttonStyle(BorderlessButtonStyle())
@@ -29,7 +29,7 @@ struct TabAView: View {
                }.padding([.leading, .trailing])
                
                List {
-                   ForEach(messages, id: \.self) { user in
+                   ForEach(alist, id: \.self) { user in
                        Text(user)
                    }
                }

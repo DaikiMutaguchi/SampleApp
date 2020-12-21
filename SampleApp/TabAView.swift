@@ -18,9 +18,9 @@ struct TabAView: View {
                 .navigationBarTitle("ToDoリスト", displayMode: .automatic)
                             .navigationBarItems(trailing:
                                 Button(action: {
-                                    self.message = "これ＋ボタンにしたいなあ"
+                                    self.message = "ここに入力フィールド入れたいなあ"
                                 }) {
-                                    Image(systemName: "magnifyingglass")
+                                    Image(systemName: "plus")
                                 }
 
                         )

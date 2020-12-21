@@ -12,41 +12,49 @@ struct TabAView: View {
     @State private var buttonLabel = "" //ボタンに表示する
     @State private var message = "ここをリスト表示したい" //
     var body: some View {
-
+        
         NavigationView { //ナビゲーションビュー
-            List(1..<2) { index in
+            List(1..<6) { index in
                             NavigationLink(destination:
                                         Text("遷移先画面")){ Text("\(index)行目")
                                         }
                 Text(message)
                 .navigationBarTitle("ToDoリスト", displayMode: .automatic)
-                            .navigationBarItems(trailing:
-                                Button(action: {
-                                    self.message = "ここに入力フィールド入れたいなあ"
-                                }) {
+                    .navigationBarItems(trailing:
+                        Button(action: {
+                            self.message = "ボタンは機能してます"
+                        }) {
                                     Image(systemName: "plus")
-                                }
-
-                        )
-
-                
-                VStack { //縦に並べます
-                           TextField("ToDoを追加する", text: $toDo) //テキストフィールド設定
-                               .textFieldStyle(RoundedBorderTextFieldStyle())  // 入力域のまわりを枠で囲む
-                               .padding()  // 余白を追加
-                }
-                
-            }
-            
-            
-            
+                        }
+                    )
             }
         }
+        
+        
+        
+        }
     }
+
 
 struct TabAView_Previews: PreviewProvider {
     static var previews: some View {
         TabAView()
+    }
+}
+
+
+
+struct ListInput {
+    @State private var memo = "仮" //
+    var body: some View {
+        NavigationView { //ナビゲーションビュー
+            Text(memo)
+            .navigationBarTitle("ToDoリスト", displayMode: .automatic)
+
+        }
+        
+
+        
     }
 }
 

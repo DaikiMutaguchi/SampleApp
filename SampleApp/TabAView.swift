@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabAView: View {
        @State var alist: [String] = []
-       @State var newalist = "alist"   //入力してもらう項目
+       @State var newalist = "alist"   //入力してもらうとこ
        var body: some View {
            VStack(alignment: .leading) {
                VStack(alignment: .leading) {

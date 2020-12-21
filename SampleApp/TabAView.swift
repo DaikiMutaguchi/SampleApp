@@ -13,11 +13,11 @@ struct TabAView: View {
        var body: some View {
            VStack(alignment: .leading) {
                VStack(alignment: .leading) {
-                   Text("リスト一覧にToDoを追加")
+                   Text("リスト一覧に追加する")
                        .font(.footnote)
                        .foregroundColor(.gray)
                    HStack {
-                       TextField("ToDoを入力", text: $newMessage).textFieldStyle(RoundedBorderTextFieldStyle())
+                       TextField("ToDoを入力する", text: $newMessage).textFieldStyle(RoundedBorderTextFieldStyle())
                        Button(action: {
                            self.messages.append(self.newMessage)
                            self.newMessage = ""

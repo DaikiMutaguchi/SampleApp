@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabAView: View {
        @State var messages: [String] = []
-       @State var newMessage = ""
+       @State var newMessage = ""   //入力してもらう項目
        var body: some View {
            VStack(alignment: .leading) {
                VStack(alignment: .leading) {

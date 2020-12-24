@@ -10,36 +10,50 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-     //このファイルは変更しなくて大丈夫！！
-        
-        TabView {                   //タブビューの宣言
+        TabView {    //タブビューの宣言
+            
+            
             TabAView()              //TabAView.swiftの呼び出し
-                .tabItem {
+                
+                .tabItem {  //タブバーに関する設定
                     VStack {
                         Image(systemName: "list.bullet")
                         Text("ToDoリスト")
-                    }
-            }.tag(1)
+                    }//タブバー設定終了
+                }.tag(1)
+            
             
             TabBView()              //TabBView.swiftの呼び出し
-                .tabItem {
+                
+                .tabItem {  //タブバーに関する設定
                     VStack {
                         Image(systemName: "eyes")
                         Text("おばけ図鑑")
-                    }
-            }.tag(2)
+                    }//タブバー設定終了
+                }.tag(2)
             
             
             TabCView()              //TabCView.swiftの呼び出し
-                .tabItem {
+               
+                .tabItem {   //タブバーに関する設定
                     VStack{
                         Image(systemName: "tablecells")
                         Text("My時間割")
-                    }
-            }.tag(3)
-        }.accentColor(.blue)       //タブバーの切替で青色にする
+                    }//タブバー設定終了
+                }.tag(3)
+            
+            
+        }//TabView終了
+        
+        //TabViewに関する設定開始
+        .accentColor(.blue)       //タブバーの切替で青色にする
+        //設定終了
+        
     }
 }
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

@@ -32,7 +32,7 @@ struct ContentView: View {
             
             TabCView()              //TabCView.swiftの呼び出し
                 .tabItem {
-                    VStack {
+                    VStack{
                         Image(systemName: "tablecells")
                         Text("My時間割")
                     }

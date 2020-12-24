@@ -11,65 +11,62 @@ struct TabCView: View {
     let Youbi = ["月" , "火" , "水" , "木" , "金"]
     var body: some View {
         //ナビゲーションビューの開始
-           NavigationView  {
-                    
-            ScrollView(.vertical, showsIndicators: false) { //縦画面サイズ調整(iPhone 8用)
+        NavigationView  {
+        ScrollView(.vertical, showsIndicators: false) { //縦画面サイズ調整(iPhone 8用)
                 
-                //横に下のVStackを並べる
-                HStack{
-                    
-                    
-                    
-                    ForEach((0...4), id: \.self) { Date in //曜日の
+            //横に下のVStack①を並べる
+            HStack{
+                
+                ForEach((0...4), id: \.self) { Date in //Vstack①を横に５回表示、0=月、4=金
                         
-                    VStack{  //下のZStackを縦に表示
+                    VStack{  //下のZStack①と②を縦に表示
                         
                         
-                        ZStack { //曜日のマスを表示
+                        ZStack { //Zstack①、曜日のマスを表示
                             Image("Youbi")
                                 .resizable()
                                 .frame(width: 65, height: 20)
                             Text(Youbi[Date]) //配列Youbiの0~4番めの値表示
                         }
                         
-                        ForEach((1...5), id: \.self) { time in
+                        
+                        ForEach((1...5), id: \.self) { time in //Zstack②を縦に5コマ表示させる
+                            NavigationLink(destination:TBDataView()){
                             
-                        NavigationLink(destination:TBDataView()){
-                            
-                            ZStack {
+                            ZStack {//Zstack②
                                 Image("TbBG")
                                         .resizable()
                                         .frame(width: 65, height: 100)
                                 Text("\(Date*5+time)")
                                 }
                                 
-                                }
-                            }
-                    }
+                            }//ナビゲーションリンク終了
+                        }//５コマ表示ループ終了
+                    }//各曜日Vstack終了
                         
-                    }
+                }//５曜日分ループ終了
                     
-                }
+            }//HStack終了
                 .navigationTitle("My時間割")
-                }
             
-           }
+        }//スクロールビュー終了
+        }//ナビゲーションビュー終了
         
-           }
-       }
+    }//body終了
+}//TabCView終了
     
 
-
+//TabCVIewプレビュー
 struct TabCView_Previews: PreviewProvider {
     static var previews: some View {
         TabCView()
-        }
     }
+}
 
 
 
 struct TBDataView: View {
-    
+    //変数の設定
     @State var subname : String = ""
     @State var submessage : String = ""
     @State var subeditting = false
@@ -79,75 +76,90 @@ struct TBDataView: View {
     @State var cleditting = false
     
     
+    
     var body: some View {
-        VStack {
+        VStack {//①〜④を縦に表示
             //入力テキスト表示エリア
-            Text(verbatim: submessage)
-            Text(verbatim: clmessage)
-            //テキスト終了
-            
+            Text(verbatim: submessage)//①
+            Text(verbatim: clmessage)//②
             
             //テキストフィールド設定
-            TextField("科目名を入力して下さい", text: $subname,
+            TextField("科目名を入力して下さい", text: $subname,//③
                       
-                onEditingChanged: { begin in
-                    /// 入力開始処理
+                onEditingChanged: { begin in//編集中に関する処理開始
+                    //入力開始処理
                     if begin {
                         self.subeditting = true    // 編集フラグをオン
                         self.submessage = ""       // メッセージをクリア
-                            
-                        /// 入力終了処理
-                    } else {
+                        //入力終了処理
+                    }
+                    
+                    else {
                         self.subeditting = false   // 編集フラグをオフ
                     }
-                },
+                },//編集中に関する処理終了
  
-                /// リターンキーが押された時の処理
-                onCommit: {
+                
+                onCommit: {//リターンキーが押された時の処理
                     self.submessage = "科目名：\(self.subname)"   // メッセージセット
                     self.subname = ""  // 入力域をクリア
-                    
-                })
+                }
+                //リターンキー処理終了
+                
+            )//テキストフィールド終了
+            
+            //テキストフィールドに関する設定
                 .textFieldStyle(RoundedBorderTextFieldStyle()) // 入力域を枠で囲む
                 .padding()      // 余白を追加
                 // 編集フラグがONの時に枠に影を付ける
                 .shadow(color: subeditting ? .blue : .clear, radius: 3)
+            //設定終了
             
             
+            //テキストフィールド④
             TextField("教室を入力して下さい", text: $clname,
                       
                 onEditingChanged: { begin in
-                    /// 入力開始処理
+                    
                     if begin {
-                        self.cleditting = true    // 編集フラグをオン
-                        self.clmessage = ""       // メッセージをクリア
+                        self.cleditting = true
+                        self.clmessage = ""
                             
-                        /// 入力終了処理
-                    } else {
-                        self.cleditting = false   // 編集フラグをオフ
+                        
+                    }
+                    else {
+                        self.cleditting = false
                     }
                 },
  
-                /// リターンキーが押された時の処理
+                
+                
                 onCommit: {
-                    self.clmessage = "教室：\(self.clname)"   // メッセージセット
-                    self.clname = ""  // 入力域をクリア
+                    self.clmessage = "教室：\(self.clname)"
+                    self.clname = ""
                     
-                })
-                .textFieldStyle(RoundedBorderTextFieldStyle()) // 入力域を枠で囲む
-                .padding()      // 余白を追加
-                // 編集フラグがONの時に枠に影を付ける
-                .shadow(color: cleditting ? .blue : .clear, radius: 3)
-            //テキストフィールド設定終了
+                }
             
-        }
-    }
-}
+            )//テキストフィールド終了
+            
+            //テキストフィールドに関する設定
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+                .shadow(color: cleditting ? .blue : .clear, radius: 3)
+            //設定終了
+            
+            
+            
+            
+        }//Vstack終了
+    }//body終了
+}//TBDataView終了
 
 
+//TBDataViewプレビュー
 struct TBDataView_Previews: PreviewProvider {
     static var previews: some View {
         TBDataView()
-        }
     }
+}
 

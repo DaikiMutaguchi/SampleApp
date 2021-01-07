@@ -21,7 +21,8 @@ struct TabAView: View {
                        .foregroundColor(.gray)
                 
                    HStack {
-                       TextField("ToDoを入力", text: $newalist).textFieldStyle(RoundedBorderTextFieldStyle())
+                       TextField("ToDoを入力", text: $newalist)
+                        .textFieldStyle(RoundedBorderTextFieldStyle()) //入力フィールドを線で囲む
                     
                        Button(action: {
                            self.alist.append(self.newalist)
@@ -39,7 +40,7 @@ struct TabAView: View {
                    ForEach(alist, id: \.self) { user in
                        Text(user)
                    }
-                   .onDelete(perform: self.deleteRow)
+                   .onDelete(perform: self.deleteRow) // リスト上にderete呼び出し
                }
            }
            .navigationTitle("ToDoリスト")

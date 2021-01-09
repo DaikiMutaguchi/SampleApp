@@ -51,11 +51,12 @@ struct TabAView: View {
         func deleteRow(offsets: IndexSet) {
                 self.alist.remove(atOffsets: offsets)
             }
-    }
-struct TabAView_Previews: PreviewProvider {
+    }//TabAView終了
+
+struct TabAView_Previews: PreviewProvider {//シミュレーター
     static var previews: some View {
         TabAView()
     }
-}
+}//シミュレーター終了
 
 

@@ -10,9 +10,9 @@ import SwiftUI
 struct TabAView: View {
        @State var alist: [String] = []//リストを並べる
        @State var newalist = ""   //ユーザーに入力してもらう
-       var body: some View {  //画面の開始
+       var body: some View {  //bodyの開始
         
-        NavigationView{ //ナビゲーションビューの開始
+        NavigationView{
            VStack(alignment: .leading) { //下部の要素とタスク表示部を縦に並べる
             
                VStack(alignment: .leading) {//下部の要素とテキストを縦に並べる
@@ -25,10 +25,10 @@ struct TabAView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle()) //入力フィールドを線で囲む
                     
                        Button(action: { //タスク登録ボタン
-                           self.alist.append(self.newalist)
-                           self.newalist = ""
+                           self.alist.append(self.newalist)//配列に要素を追加
+                           self.newalist = ""//入力フィールドを空に
                        }) {
-                           Text("Done")
+                           Text("Done")//ボタンのスタイル
                                .buttonStyle(BorderlessButtonStyle())
                        }
                     
@@ -37,17 +37,17 @@ struct TabAView: View {
                }.padding([.leading, .trailing])
                 //テキストと横並び要素の縦並び終了、要素の両端にスペースを設ける
                
-               List {
+               List {//リスト表示
                    ForEach(alist, id: \.self) { user in
                        Text(user)
                    }
                    .onDelete(perform: self.deleteRow) // リスト上にderete呼び出し
-               }
-           }
+               }//リスト表示終了
+           }//リストと要素の縦並び終了
            .navigationTitle("ToDoリスト")
             
-            }
-       }
+            }//ナビゲーションビューの終了
+       }//bodyの終了
         func deleteRow(offsets: IndexSet) {
                 self.alist.remove(atOffsets: offsets)
             }

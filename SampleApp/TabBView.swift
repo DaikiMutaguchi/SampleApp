@@ -10,8 +10,10 @@ import SwiftUI
 struct TabBView: View {
     var body: some View {
         Image("Obake.png")
-            .resizable()
+            .resizable()//画像をフレームの大きさに合わせる
             .frame(width: 380.0, height: 700.0, alignment: .leading)
+                    //フレームサイズの指定
+    
     }
 }
 

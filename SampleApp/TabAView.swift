@@ -41,22 +41,22 @@ struct TabAView: View {
                    ForEach(alist, id: \.self) { user in
                        Text(user)
                    }
-                   .onDelete(perform: self.deleteRow) // リスト上にderete呼び出し
+                   .onDelete(perform: self.deleteRow) // 削除処理呼び出し
                }//リスト表示終了
            }//リストと要素の縦並び終了
            .navigationTitle("ToDoリスト")
             
             }//ナビゲーションビューの終了
        }//bodyの終了
-        func deleteRow(offsets: IndexSet) {
-                self.alist.remove(atOffsets: offsets)
+        func deleteRow(offsets: IndexSet) {//リスト削除処理
+                self.alist.remove(atOffsets: offsets)//alistをスライド削除
             }
     }//TabAView終了
 
-struct TabAView_Previews: PreviewProvider {//シミュレーター
+struct TabAView_Previews: PreviewProvider {//TabAViewのシミュレーター
     static var previews: some View {
         TabAView()
     }
-}//シミュレーター終了
+}//TabAViewのシミュレーター終了
 
 

@@ -35,7 +35,7 @@ struct TabAView: View {
                    }//入力フィールドとボタンの横並び終了
                                 
                }.padding([.leading, .trailing])
-                //テキストと横並び要素の縦並び終了、要素の両端にスペースを設ける
+                //テキストと横並び要素の縦並び終了、要素の両端にスペースを設けて配置
                
                List {//リスト表示
                    ForEach(alist, id: \.self) { user in

@@ -10,7 +10,7 @@ import SwiftUI
 struct TabAView: View {
        @State var alist: [String] = []//リストを並べる
        @State var newalist = ""   //ユーザーに入力してもらう
-       var body: some View {  //bodyの開始
+       var body: some View {  
         
         NavigationView{
            VStack(alignment: .leading) { //下部の要素とタスク表示部を縦に並べる
@@ -48,8 +48,8 @@ struct TabAView: View {
             
             }//ナビゲーションビューの終了
        }//bodyの終了
-        func deleteRow(offsets: IndexSet) {//リスト削除処理
-                self.alist.remove(atOffsets: offsets)//alistをスライド削除
+        func deleteRow(offsets: IndexSet) {
+                self.alist.remove(atOffsets: offsets)
             }
     }//TabAView終了
 
@@ -58,5 +58,3 @@ struct TabAView_Previews: PreviewProvider {//TabAViewのシミュレーター
         TabAView()
     }
 }//TabAViewのシミュレーター終了
-
-

@@ -27,6 +27,7 @@ struct TabCView: View {
                                 .resizable()
                                 .frame(width: 65, height: 20)
                             Text(Youbi[Date]) //配列Youbiの0~4番めの値表示
+                    
                         }
                         
                         
@@ -37,8 +38,13 @@ struct TabCView: View {
                                 Image("TbBG")
                                         .resizable()
                                         .frame(width: 65, height: 100)
-                                Text("\(Date*5+time)")
+                                VStack{
+                                Text("教室\(Date*5+time)")
+                                Text("科目\(Date*5+time)")
                                 }
+                                
+                            }
+                                
                                 
                             }//ナビゲーションリンク終了
                         }//５コマ表示ループ終了

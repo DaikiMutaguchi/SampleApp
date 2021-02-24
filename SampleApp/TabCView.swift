@@ -9,17 +9,18 @@ import SwiftUI
 
 struct TabCView: View {
     let Youbi = ["月" , "火" , "水" , "木" , "金"]
-    let SubTitle = ["0", "月１", "月2","月３","月４","月５"]
+    var SubTitle: [String] = Array(repeating: "未登録", count: 26)//String型の配列を２６要素設定し、「未登録」で初期化
     var body: some View {
         //ナビゲーションビューの開始
         NavigationView  {
         ScrollView(.vertical, showsIndicators: false) { //縦画面サイズ調整(iPhone 8用)
-                
+            
             //横に下のVStack①を並べる
             HStack{
                 
                 ForEach((0...4), id: \.self) { Date in //Vstack①を横に５回表示、0=月、4=金
                         
+                 
                     VStack{  //下のZStack①と②を縦に表示
                         
                         
@@ -32,7 +33,10 @@ struct TabCView: View {
                         }
                         
                         
-                        ForEach((1...5), id: \.self) { time in //Zstack②を縦に5コマ表示させる
+                        ForEach((1...5), id: \.self) { time in
+                            
+                            
+                            //Zstack②を縦に5コマ表示させる
                             NavigationLink(destination:TBDataView()){
                             
                             ZStack {//Zstack②
@@ -40,7 +44,7 @@ struct TabCView: View {
                                         .resizable()
                                         .frame(width: 65, height: 100)
                                 VStack{
-                                Text(SubTitle[Date+1])
+                                Text(SubTitle[Date*time])
                                 Text("科目\(Date*5+time)")
                                 }
                                 

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabCView: View {
     let Youbi = ["月" , "火" , "水" , "木" , "金"]
+    let SubTitle = ["0", "月１", "月2","月３","月４","月５"]
     var body: some View {
         //ナビゲーションビューの開始
         NavigationView  {
@@ -39,7 +40,7 @@ struct TabCView: View {
                                         .resizable()
                                         .frame(width: 65, height: 100)
                                 VStack{
-                                Text("教室\(Date*5+time)")
+                                Text(SubTitle[Date+1])
                                 Text("科目\(Date*5+time)")
                                 }
                                 

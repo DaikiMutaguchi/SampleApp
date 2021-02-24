@@ -15,6 +15,7 @@ struct TabCView: View {
         NavigationView  {
         ScrollView(.vertical, showsIndicators: false) { //縦画面サイズ調整(iPhone 8用)
             
+            
             //横に下のVStack①を並べる
             HStack{
                 

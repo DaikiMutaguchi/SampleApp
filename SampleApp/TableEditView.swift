@@ -12,6 +12,7 @@ import SwiftUI
 struct TableEditView: View {
     let Date = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日"]
     let Jikan = ["ダミー","１限","２限","３限","４限","５限"]
+    
     @State var SubTitle: [String] = Array(repeating: "未登録", count: 26)
     @State var ClassNo: [String] = Array(repeating: "未登録", count: 26)
     
@@ -20,15 +21,10 @@ struct TableEditView: View {
     
     
     @State var subname : String = ""
-    @State var submessage : String = ""
     @State var subeditting = false
     
     @State var clname : String = ""
-    @State var clmessage : String = ""
     @State var cleditting = false
-    
-    @State var DateLoop = 0
-    @State var JikanLoop = 0
     
     
     

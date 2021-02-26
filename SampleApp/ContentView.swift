@@ -47,11 +47,9 @@ struct ContentView: View {
         
         //TabViewに関する設定開始
         .accentColor(.blue)       //タブバーの切替で青色にする
+        .environmentObject(SjAndCn()) //SjAndCn.swiftのクラスからグローバル変数を作成
         //設定終了
         
-        
-        
-        .environmentObject(SjAndCn())
     }
 }
 

@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct TabCView: View {
+    
     let Youbi = ["月" , "火" , "水" , "木" , "金"]
-    //var SubTitle: [String] = Array(repeating: "未登録", count: 26)//String型の配列を２６要素設定し、「未登録」で初期化
-    @EnvironmentObject var CSubTitle: SjAndCn
-    @EnvironmentObject var CClassNo: SjAndCn
+    @EnvironmentObject var CSubTitle: SjAndCn //クラスSjAndCnから変数を作成
+    @EnvironmentObject var CClassNo: SjAndCn  //クラスSjAndCnから変数を作成
     
     var body: some View {
         //ナビゲーションビューの開始
@@ -42,25 +42,28 @@ struct TabCView: View {
                             
                             //Zstack②を縦に5コマ表示させる
                             
-                            //ナビゲーションリンクをコメントアウトしておく
+                            //ナビゲーションリンクの開始（アウト）
                             //NavigationLink(destination:TBDataView()){
                             
                             ZStack {//Zstack②
                                 Image("TbBG")
                                         .resizable()
                                         .frame(width: 65, height: 100)
+                                
                                 VStack{
+                                    
                                 Text(CSubTitle.SubTitle[Date*5+time])
-                                        .background(Color.gray)    // Text Viewの背景を青に
-                                     //   .frame(width: 65, height:80 , alignment: .top)  // フレームの設定
-                                        .border(Color.red, width: 2)   // フレームに枠線をつけて可視化
+                                    .fontWeight(.semibold)
+                                    .frame(width: 65, height:80 , alignment: .center)  // フレームの設定
+                                //  .border(Color.red, width: 2)   // フレームに枠線をつけて可視化（アウト済）
                                     
                                 Text(CClassNo.ClassNo[Date*5+time])
-                                   // .frame(width: 65, height:20 ,alignment: .bottom)  // フレームの設定
-                                    .border(Color.green, width: 2)
-                                }
+                                   .frame(width: 65, height:20 ,  alignment: .center )  // フレームの設定
+                                // .border(Color.green, width: 2) //枠線の可視化（アウト済）
+                                    
+                                } //VStackの科目名、教室名テキスト配置終了
                                 
-                            }
+                            } //1コマ分のマス設定終了
                                 
                                 
                          //   }//ナビゲーションリンク終了
@@ -72,18 +75,17 @@ struct TabCView: View {
             }//HStack終了
             
         }//スクロールビュー終了
-        .navigationBarTitle("My時間割")
-       
-                   
-                   .toolbar {
-                      /// ナビゲーションバー右２
-                       ToolbarItem(placement: .navigationBarTrailing){
-                        NavigationLink(destination:TableEditView()){
-                           Image(systemName: "square.and.pencil")
-                       }
-                       }
-                       
-                           }
+        .navigationBarTitle("My時間割") //ナビゲーションバーにタイトル設定
+        
+        .toolbar { //バーにアイコンを設定
+                ToolbarItem(placement: .navigationBarTrailing){  //アイテムをバーの右側に配置
+                    NavigationLink(destination:TableEditView()){ //↓のアイコンにナビゲーションリンクを設定
+                        Image(systemName: "square.and.pencil")   //アイコンの設定
+                    }
+                }
+        }
+            
+            
         }//ナビゲーションビュー終了
         
     }//body終了
@@ -94,6 +96,6 @@ struct TabCView: View {
 struct TabCView_Previews: PreviewProvider {
     static var previews: some View {
         TabCView()
-            .environmentObject(SjAndCn())
+            .environmentObject(SjAndCn())  //このビューでクラスSjAndCnにあるグローバル変数の使用を記入
     }
 }

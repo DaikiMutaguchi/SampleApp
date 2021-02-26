@@ -50,7 +50,8 @@ struct TabCView: View {
                                         .resizable()
                                         .frame(width: 65, height: 100)
                                 VStack{
-                                    Text(CSubTitle.SubTitle[Date*5+time])
+                                Text(CSubTitle.SubTitle[Date*5+time])
+                                Spacer()
                                 Text(CClassNo.ClassNo[Date*5+time])
                                 }
                                 

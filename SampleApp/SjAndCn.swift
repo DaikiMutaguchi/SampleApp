@@ -8,6 +8,6 @@
 import SwiftUI
  
 class SjAndCn : ObservableObject {
-    @Published var  SubTitle: [String] = Array(repeating: "未登録", count: 26)
-    @Published var  ClassNo: [String] = Array(repeating: "未登録", count: 26)
+    @Published var  SubTitle: [String] = Array(repeating: "", count: 26)
+    @Published var  ClassNo: [String] = Array(repeating: "", count: 26)
 }

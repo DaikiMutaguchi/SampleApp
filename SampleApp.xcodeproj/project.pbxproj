@@ -14,7 +14,6 @@
 		52E76F9E2589BDFD000B24C0 /* TabAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76F9D2589BDFD000B24C0 /* TabAView.swift */; };
 		52E76FA12589BE1D000B24C0 /* TabBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76FA02589BE1D000B24C0 /* TabBView.swift */; };
 		52E76FA82589C431000B24C0 /* TabCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76FA72589C431000B24C0 /* TabCView.swift */; };
-		D26DD2D725E902BC002D9D2A /* TBDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26DD2D625E902BC002D9D2A /* TBDataView.swift */; };
 		D26DD2DA25E90586002D9D2A /* TableEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26DD2D925E90586002D9D2A /* TableEditView.swift */; };
 		D26DD2DD25E92B34002D9D2A /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26DD2DC25E92B34002D9D2A /* TextView.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +28,6 @@
 		52E76F9D2589BDFD000B24C0 /* TabAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabAView.swift; sourceTree = "<group>"; };
 		52E76FA02589BE1D000B24C0 /* TabBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBView.swift; sourceTree = "<group>"; };
 		52E76FA72589C431000B24C0 /* TabCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCView.swift; sourceTree = "<group>"; };
-		D26DD2D625E902BC002D9D2A /* TBDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBDataView.swift; sourceTree = "<group>"; };
 		D26DD2D925E90586002D9D2A /* TableEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableEditView.swift; sourceTree = "<group>"; };
 		D26DD2DC25E92B34002D9D2A /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,7 +67,6 @@
 				52E76F9D2589BDFD000B24C0 /* TabAView.swift */,
 				52E76FA02589BE1D000B24C0 /* TabBView.swift */,
 				52E76FA72589C431000B24C0 /* TabCView.swift */,
-				D26DD2D625E902BC002D9D2A /* TBDataView.swift */,
 				D26DD2DC25E92B34002D9D2A /* TextView.swift */,
 				D26DD2D925E90586002D9D2A /* TableEditView.swift */,
 				52E76F912589BCD8000B24C0 /* Assets.xcassets */,
@@ -159,7 +156,6 @@
 				52E76FA82589C431000B24C0 /* TabCView.swift in Sources */,
 				52E76FA12589BE1D000B24C0 /* TabBView.swift in Sources */,
 				D26DD2DD25E92B34002D9D2A /* TextView.swift in Sources */,
-				D26DD2D725E902BC002D9D2A /* TBDataView.swift in Sources */,
 				52E76F9E2589BDFD000B24C0 /* TabAView.swift in Sources */,
 				D26DD2DA25E90586002D9D2A /* TableEditView.swift in Sources */,
 				52E76F902589BCD7000B24C0 /* ContentView.swift in Sources */,

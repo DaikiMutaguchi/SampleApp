@@ -23,7 +23,7 @@ struct ContentView: View {
                 }.tag(1)
             
             
-            TextView()              //TabBView.swiftの呼び出し
+            TabBView()              //TabBView.swiftの呼び出し
                 
                 .tabItem {  //タブバーに関する設定
                     VStack {

@@ -16,6 +16,8 @@
 		52E76FA82589C431000B24C0 /* TabCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76FA72589C431000B24C0 /* TabCView.swift */; };
 		D26DD2DA25E90586002D9D2A /* TableEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26DD2D925E90586002D9D2A /* TableEditView.swift */; };
 		D26DD2DD25E92B34002D9D2A /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26DD2DC25E92B34002D9D2A /* TextView.swift */; };
+		D2956AB125E9631B0007E833 /* SjAndCn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2956AB025E9631B0007E833 /* SjAndCn.swift */; };
+		D2956AB425E965360007E833 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2956AB325E965360007E833 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		52E76FA72589C431000B24C0 /* TabCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCView.swift; sourceTree = "<group>"; };
 		D26DD2D925E90586002D9D2A /* TableEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableEditView.swift; sourceTree = "<group>"; };
 		D26DD2DC25E92B34002D9D2A /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		D2956AB025E9631B0007E833 /* SjAndCn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SjAndCn.swift; sourceTree = "<group>"; };
+		D2956AB325E965360007E833 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +67,14 @@
 			isa = PBXGroup;
 			children = (
 				52E76F8F2589BCD7000B24C0 /* ContentView.swift */,
+				D2956AB325E965360007E833 /* SceneDelegate.swift */,
 				52E76F8D2589BCD7000B24C0 /* SampleAppApp.swift */,
 				52E76F9D2589BDFD000B24C0 /* TabAView.swift */,
 				52E76FA02589BE1D000B24C0 /* TabBView.swift */,
 				52E76FA72589C431000B24C0 /* TabCView.swift */,
-				D26DD2DC25E92B34002D9D2A /* TextView.swift */,
 				D26DD2D925E90586002D9D2A /* TableEditView.swift */,
+				D2956AB025E9631B0007E833 /* SjAndCn.swift */,
+				D26DD2DC25E92B34002D9D2A /* TextView.swift */,
 				52E76F912589BCD8000B24C0 /* Assets.xcassets */,
 				52E76F962589BCD8000B24C0 /* Info.plist */,
 				52E76F932589BCD8000B24C0 /* Preview Content */,
@@ -154,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E76FA82589C431000B24C0 /* TabCView.swift in Sources */,
+				D2956AB125E9631B0007E833 /* SjAndCn.swift in Sources */,
+				D2956AB425E965360007E833 /* SceneDelegate.swift in Sources */,
 				52E76FA12589BE1D000B24C0 /* TabBView.swift in Sources */,
 				D26DD2DD25E92B34002D9D2A /* TextView.swift in Sources */,
 				52E76F9E2589BDFD000B24C0 /* TabAView.swift in Sources */,

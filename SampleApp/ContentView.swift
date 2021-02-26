@@ -49,6 +49,9 @@ struct ContentView: View {
         .accentColor(.blue)       //タブバーの切替で青色にする
         //設定終了
         
+        
+        
+        .environmentObject(SjAndCn())
     }
 }
 

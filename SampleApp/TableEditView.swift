@@ -13,8 +13,11 @@ struct TableEditView: View {
     let Date = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日"]
     let Jikan = ["ダミー","１限","２限","３限","４限","５限"]
     
-    @State var SubTitle: [String] = Array(repeating: "未登録", count: 26)
-    @State var ClassNo: [String] = Array(repeating: "未登録", count: 26)
+    //@State var SubTitle: [String] = Array(repeating: "未登録", count: 26)
+   // @State var ClassNo: [String] = Array(repeating: "未登録", count: 26)
+    
+    @EnvironmentObject var ESubTitle: SjAndCn
+    @EnvironmentObject var EClassNo: SjAndCn
     
     @State private var Dselection = 0
     @State private var Jselection = 0
@@ -55,7 +58,7 @@ struct TableEditView: View {
                 HStack{
                 Text("科目")//①
                     Spacer()
-                    Text(SubTitle[Dselection*5+Jselection])
+                    Text(ESubTitle.SubTitle[Dselection*5+Jselection])
                 }
                     TextField("科目名を入力して下さい", text: $subname,//③
                               
@@ -63,13 +66,13 @@ struct TableEditView: View {
                             //入力開始処理
                             if begin {
                                 self.subeditting = true    // 編集フラグをオン
-                                self.SubTitle[Dselection*5+Jselection] = ""       // メッセージをクリア
+                                self.ESubTitle.SubTitle[Dselection*5+Jselection] = ""       // メッセージをクリア
                                 //入力終了処理
                             }
                             
                             else {
                                 self.subeditting = false   // 編集フラグをオフ
-                                self.SubTitle[Dselection*5+Jselection] = "\(self.subname)"   // メッセージセット
+                                self.ESubTitle.SubTitle[Dselection*5+Jselection] = "\(self.subname)"   // メッセージセット
                                 self.subname = ""  // 入力域をクリア
                                 
                                 
@@ -94,7 +97,7 @@ struct TableEditView: View {
                 HStack{
                     Text("教室")
                     Spacer()
-                    Text(ClassNo[Dselection*5+Jselection])//②
+                    Text(EClassNo.ClassNo[Dselection*5+Jselection])//②
                     
                 }
                     TextField("教室を入力して下さい", text: $clname,
@@ -103,13 +106,13 @@ struct TableEditView: View {
                             
                             if begin {
                                 self.cleditting = true
-                                self.ClassNo[Dselection*5+Jselection] = ""
+                                self.EClassNo.ClassNo[Dselection*5+Jselection] = ""
                                     
                                 
                             }
                             else {
                                 self.cleditting = false
-                                self.ClassNo[Dselection*5+Jselection] = "\(self.clname)"
+                                self.EClassNo.ClassNo[Dselection*5+Jselection] = "\(self.clname)"
                                 self.clname = ""
                                 
                                 
@@ -139,5 +142,6 @@ struct TableEditView: View {
 struct TableEditView_Previews: PreviewProvider {
     static var previews: some View {
         TableEditView()
+            .environmentObject(SjAndCn())
     }
 }

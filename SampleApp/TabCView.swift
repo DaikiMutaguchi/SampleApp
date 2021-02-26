@@ -52,11 +52,11 @@ struct TabCView: View {
                                 VStack{
                                 Text(CSubTitle.SubTitle[Date*5+time])
                                         .background(Color.gray)    // Text Viewの背景を青に
-                                        .frame(width: 65, height:80 , alignment: .top)  // フレームの設定
+                                     //   .frame(width: 65, height:80 , alignment: .top)  // フレームの設定
                                         .border(Color.red, width: 2)   // フレームに枠線をつけて可視化
                                     
                                 Text(CClassNo.ClassNo[Date*5+time])
-                                    .frame(width: 65, height:20 ,alignment: .bottom)  // フレームの設定
+                                   // .frame(width: 65, height:20 ,alignment: .bottom)  // フレームの設定
                                     .border(Color.green, width: 2)
                                 }
                                 

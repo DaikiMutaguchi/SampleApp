@@ -79,10 +79,19 @@ struct TabCView: View {
         
         .toolbar { //バーにアイコンを設定
                 ToolbarItem(placement: .navigationBarTrailing){  //アイテムをバーの右側に配置
-                    NavigationLink(destination:TableEditView()){ //↓のアイコンにナビゲーションリンクを設定
-                        Image(systemName: "square.and.pencil")   //アイコンの設定
+                    NavigationLink(destination:SubMemoView()){ //↓のアイコンにナビゲーションリンクを設定
+                        Image(systemName: "exclamationmark.square")   //アイコンの設定
                     }
                 }
+            
+            ToolbarItem(placement: .navigationBarTrailing){  //アイテムをバーの右側に配置
+                NavigationLink(destination:TableEditView()){ //↓のアイコンにナビゲーションリンクを設定
+                    Image(systemName: "square.and.pencil")   //アイコンの設定
+                }
+            }
+            
+            
+            
         }
             
             

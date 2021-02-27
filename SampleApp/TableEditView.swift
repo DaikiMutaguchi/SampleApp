@@ -16,12 +16,21 @@ struct TableEditView: View {
     
     @EnvironmentObject var ESubTitle: SjAndCn    //クラスSjAndCnから、変数ESubJectを設定
     @EnvironmentObject var EClassNo: SjAndCn    //クラスSjAndCnから、変数EClassNoを設定
+    @EnvironmentObject var EMemo: SjAndCn    //クラスSjAndCnから、変数ESubJectを設定
+    
     @State private var Dselection = 5   //Pickerで選んだ配列Dateの要素番号が代入される。初期値は５の（未選択）
     @State private var Jselection = 5   //Pickerで選んだ配列Jikanの要素番号が代入される。初期値は５の（未選択）
     @State var subname : String = ""
     @State var subeditting = false      //科目名のテキストフィールドを編集しているかどうか
+    
     @State var clname : String = ""
     @State var cleditting = false      //教室名のテキストフィールドを編集しているかどうか
+    
+    @State var Memoname : String = ""
+    @State var Memoeditting = false      //科目名のテキストフィールドを編集しているかどうか
+    
+    
+    @State private var Flag = false
     
     
     
@@ -103,6 +112,36 @@ struct TableEditView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .shadow(color: cleditting ? .blue : .clear, radius: 3)
                 //設定終了
+                
+                
+                Toggle(isOn:$Flag) {
+                                Text("授業メモの追加")
+                            }
+                if Flag {
+                Text(EMemo.Memo[Dselection*5+Jselection])
+                TextField("１５文字以内で入力", text: $Memoname,
+                              
+                        onEditingChanged: { begin in
+                            
+                            if begin {
+                                self.Memoeditting = true
+                                self.EMemo.Memo[Dselection*5+Jselection] = ""
+                            }
+                            else {
+                                self.Memoeditting = false
+                                self.EMemo.Memo[Dselection*5+Jselection] = "\(self.Memoname)"
+                                self.Memoname = ""
+                            }
+                        }
+                )//テキストフィールド終了
+                //テキストフィールドに関する設定
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .shadow(color: Memoeditting ? .blue : .clear, radius: 3)
+                .disabled(!Flag)
+                //設定終了
+                
+                
+                }
                 
             }//フォームの終了
             

@@ -125,6 +125,7 @@ struct TableEditView: View {
                 if Flag {
                 
                 Text(EMemo.Memo[Dselection*5+Jselection])
+                    .font(.system(.headline, design: .rounded))
                     
                 TextField("１５文字以内で入力", text: $Memoname,
                               
@@ -150,11 +151,7 @@ struct TableEditView: View {
                 
                 }
                 
-                else{
-                    Text(EMemo.Memo[Dselection*5+Jselection])
-                        .font(.system(.headline, design: .rounded))
-                    
-                            }
+                
                     
                 
                 

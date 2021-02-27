@@ -10,8 +10,8 @@ import SwiftUI
 
 
 struct TableEditView: View {
-    let Date = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日" , "(未選択)"] //Pickerの項目を設定
-    let Jikan = ["ダミー","１限","２限","３限","４限","５限" , "(未選択)"]    //Pickerの項目を設定
+    let Date = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日" , "(選択して下さい)"] //Pickerの項目を設定
+    let Jikan = ["ダミー","１限","２限","３限","４限","５限" , "(選択して下さい)"]    //Pickerの項目を設定
     
     
     @EnvironmentObject var ESubTitle: SjAndCn    //クラスSjAndCnから、変数ESubJectを設定
@@ -32,7 +32,11 @@ struct TableEditView: View {
     
     @State private var Flag = false
     
+    @State private var Delete : String = ""
     
+    func MemoDelete(){
+        self.EMemo.Memo[Dselection*5+Jselection] = ""
+    }
     
     var body: some View {
         NavigationView {    // Formで使う場合はNavigationViewが必須
@@ -115,10 +119,13 @@ struct TableEditView: View {
                 
                 
                 Toggle(isOn:$Flag) {
-                                Text("授業メモの追加")
-                            }
+                                Text("授業メモの追加／編集")
+                                
+                }
                 if Flag {
+                
                 Text(EMemo.Memo[Dselection*5+Jselection])
+                    
                 TextField("１５文字以内で入力", text: $Memoname,
                               
                         onEditingChanged: { begin in
@@ -142,6 +149,17 @@ struct TableEditView: View {
                 
                 
                 }
+                
+                else{
+                    Text(EMemo.Memo[Dselection*5+Jselection])
+                        .font(.system(.headline, design: .rounded))
+                    
+                            }
+                    
+                
+                
+                  
+                
                 
             }//フォームの終了
             

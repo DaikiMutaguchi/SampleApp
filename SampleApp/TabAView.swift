@@ -31,7 +31,7 @@ struct TabAView: View {
                        }) {
                            Text("Done")//ボタンのスタイル
                                .buttonStyle(BorderlessButtonStyle())
-                       }
+                       }.disabled(newalist.isEmpty)  //文字が入力されてない時は押せない
                     
                    }//入力フィールドとボタンの横並び終了
                                 

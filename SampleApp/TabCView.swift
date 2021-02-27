@@ -55,11 +55,23 @@ struct TabCView: View {
                                 Text(CSubTitle.SubTitle[Date*5+time])
                                     .fontWeight(.semibold)
                                     .frame(width: 65, height:80 , alignment: .center)  // フレームの設定
-                                //  .border(Color.red, width: 2)   // フレームに枠線をつけて可視化（アウト済）
+                                // .border(Color.red, width: 2)   // フレームに枠線をつけて可視化（アウト済）
+                                    
+                                    
+                                //Text(CClassNo.ClassNo[Date*5+time])
+                             //       .italic()
+                              //      .underline(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, color: Color.red)
+                                    //.background(Color.blue)
+                                //    .frame(width: 65, height:20 ,  alignment: .center )  // フレームの設定
+                                    
+                                    
+                                 //   .border(Color.green, width: 2) //枠線の可視化（アウト済）
+                                    
+                                    
                                     
                                 Text(CClassNo.ClassNo[Date*5+time])
                                    .frame(width: 65, height:20 ,  alignment: .center )  // フレームの設定
-                                // .border(Color.green, width: 2) //枠線の可視化（アウト済）
+                               //  .border(Color.green, width: 2) //枠線の可視化（アウト済）
                                     
                                 } //VStackの科目名、教室名テキスト配置終了
                                 
@@ -79,14 +91,16 @@ struct TabCView: View {
         
         .toolbar { //バーにアイコンを設定
                 ToolbarItem(placement: .navigationBarTrailing){  //アイテムをバーの右側に配置
+                   
                     NavigationLink(destination:SubMemoView()){ //↓のアイコンにナビゲーションリンクを設定
-                        Image(systemName: "exclamationmark.square")   //アイコンの設定
+                        
+                        Image(systemName: "note.text")   //アイコンの設定
                     }
                 }
             
             ToolbarItem(placement: .navigationBarTrailing){  //アイテムをバーの右側に配置
                 NavigationLink(destination:TableEditView()){ //↓のアイコンにナビゲーションリンクを設定
-                    Image(systemName: "square.and.pencil")   //アイコンの設定
+                    Image(systemName: "rectangle.and.pencil.and.ellipsis")   //アイコンの設定
                 }
             }
             

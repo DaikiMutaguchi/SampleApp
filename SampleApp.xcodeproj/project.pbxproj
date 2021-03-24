@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0DE84F260B1A1F009A61DF /* ListEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DE84E260B1A1F009A61DF /* ListEntryView.swift */; };
 		52E76F8E2589BCD7000B24C0 /* SampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76F8D2589BCD7000B24C0 /* SampleAppApp.swift */; };
 		52E76F902589BCD7000B24C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76F8F2589BCD7000B24C0 /* ContentView.swift */; };
 		52E76F922589BCD8000B24C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E76F912589BCD8000B24C0 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E0DE84E260B1A1F009A61DF /* ListEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntryView.swift; sourceTree = "<group>"; };
 		52E76F8A2589BCD7000B24C0 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E76F8D2589BCD7000B24C0 /* SampleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppApp.swift; sourceTree = "<group>"; };
 		52E76F8F2589BCD7000B24C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		52E76F8C2589BCD7000B24C0 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				1E0DE84E260B1A1F009A61DF /* ListEntryView.swift */,
 				52E76F8F2589BCD7000B24C0 /* ContentView.swift */,
 				D2956AB325E965360007E833 /* SceneDelegate.swift */,
 				52E76F8D2589BCD7000B24C0 /* SampleAppApp.swift */,
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E76FA82589C431000B24C0 /* TabCView.swift in Sources */,
+				1E0DE84F260B1A1F009A61DF /* ListEntryView.swift in Sources */,
 				D2956AB125E9631B0007E833 /* SjAndCn.swift in Sources */,
 				D2956AB425E965360007E833 /* SceneDelegate.swift in Sources */,
 				D28860E325EA767200ED7D00 /* SubMemoView.swift in Sources */,

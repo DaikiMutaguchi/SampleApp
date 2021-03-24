@@ -13,6 +13,7 @@ struct ListEntryView: View {
     }
 }
 
+
 struct ListEntryView_Previews: PreviewProvider {
     static var previews: some View {
         ListEntryView()

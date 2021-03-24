@@ -23,7 +23,7 @@ struct TabAView: View {
                     Text("課題をリストに追加しよう！")
                        .font(.footnote)
                        .foregroundColor(.gray)
-                
+
                     HStack {//入力フィールドとDoneボタンを横に並べる
                        TextField("ToDoを入力", text: $NewAlist) //入力タスクをフィールドに
                         .textFieldStyle(RoundedBorderTextFieldStyle()) //入力フィールドを線で囲む
@@ -47,9 +47,18 @@ struct TabAView: View {
                    }
                    .onDelete(perform: self.deleteRow) // 削除処理呼び出し
                }//リスト表示終了
+                
            }//リストと要素の縦並び終了
             
            .navigationTitle("ToDoリスト")
+            
+            .toolbar { //バーにアイコンを設定
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        NavigationLink(destination:ListEntryView()){ //↓のアイコンにナビゲーションリンクを設定
+                            Text("aiueo")   //アイコンの設定
+                        }
+                    }
+            }
             }//ナビゲーションビューの終了
        }//bodyの終了
     

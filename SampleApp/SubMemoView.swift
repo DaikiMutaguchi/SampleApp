@@ -19,6 +19,9 @@ struct SubMemoView: View {
                 Section(header: Text(Youbi[Date])){
                     ForEach((0...4), id: \.self) { time in
                         Text("\(time+1)限：\(SubMemo.Memo[Date*5+time])")
+                        Text("欠席回数：")
+                        
+                        
                     }
                 }
             }

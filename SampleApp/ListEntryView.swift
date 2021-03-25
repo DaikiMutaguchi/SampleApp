@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ListEntryView: View {
-    @State var number = 0
     var body: some View {
-
-        Text("リストを分けるかどうか迷っています")
-        Text("日付を設定できるようにしたい")
-        
+        NavigationView{
+            
+            VStack{
+            Text("構成迷い中")
+            Text("")
+            Text("1.リスト表示部と登録部を分けるかどうか")
+            Text("2.日付をどう入れるか")
+            Text("3.単なる削除と課題達成のための削除との差別化")
+            }
+        }
     }
 }
+
 
 
 struct ListEntryView_Previews: PreviewProvider {

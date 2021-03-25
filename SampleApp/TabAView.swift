@@ -52,10 +52,10 @@ struct TabAView: View {
             
            .navigationTitle("ToDoリスト")
             
-            .toolbar { //バーにアイコンを設定
+            .toolbar {   //
                     ToolbarItem(placement: .navigationBarTrailing){
-                        NavigationLink(destination:ListEntryView()){ //↓のアイコンにナビゲーションリンクを設定
-                            Text("aiueo")   //アイコンの設定
+                        NavigationLink(destination:ListEntryView()){
+                            Text("追加")   //ボタン
                         }
                     }
             }

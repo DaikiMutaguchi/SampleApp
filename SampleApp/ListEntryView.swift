@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ListEntryView: View {
+    @State var number = 0
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+        Text("リストを分けるかどうか迷っています")
+        Text("日付を設定できるようにしたい")
+        
     }
 }
 
@@ -17,5 +21,5 @@ struct ListEntryView: View {
 struct ListEntryView_Previews: PreviewProvider {
     static var previews: some View {
         ListEntryView()
-    }
+   }
 }

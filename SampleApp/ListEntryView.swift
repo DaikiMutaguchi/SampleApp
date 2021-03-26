@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListEntryView: View {
     var body: some View {
-        Text("へろ〜わ〜るど")
+        Text("へろ〜〜わ〜るど")
     }
 }
 

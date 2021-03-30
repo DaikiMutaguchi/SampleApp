@@ -4,7 +4,6 @@
 //
 //  Created by Daiki Mutaguchi on 2020/12/16.
 //
-
 import SwiftUI
 
 struct TabCView: View {

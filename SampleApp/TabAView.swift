@@ -59,7 +59,7 @@ struct TabAView: View {
             }//操作部とリストの縦並び終了
             
             
-           .navigationTitle("とぅ〜どぅ〜リスト")
+           .navigationTitle("ToDoリスト")
             
                 .toolbar {   //
                     ToolbarItem(placement: .navigationBarTrailing){

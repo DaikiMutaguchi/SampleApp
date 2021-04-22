@@ -42,6 +42,7 @@ struct TabAView: View {
                List {//リスト表示
                    ForEach(Alist, id: \.self) { user in
                        Text(user)
+                    
                    }
                    .onDelete(perform: self.deleteRow) // 削除処理1呼び出し
                }//リスト表示終了

@@ -10,7 +10,7 @@ import SwiftUI
 struct TabAView: View {
         @State var Alist: [String] = []//リストを並べる
         @State var NewAlist = ""   //ユーザーに入力してもらう
-        @State var TaskPoint = 0 //タスク完了で得られるポイント
+        @EnvironmentObject var TaskPoint: SjAndCn //タスク完了で得られるポイント
         var body: some View {   //bodyの開始
 
         NavigationView{
@@ -50,9 +50,9 @@ struct TabAView: View {
                 
                 
                 HStack {          // ポイントカウント
-                    Text("\(TaskPoint)")
+                    Text("\(TaskPoint.Point)")
                     Text("ポイント獲得")
-                    Button(action:{self.TaskPoint = 0}){
+                    Button(action:{self.TaskPoint.Point = 0}){
                         Text("リセット")
                     }
                 }
@@ -76,7 +76,7 @@ struct TabAView: View {
     
         func deleteRow(offsets: IndexSet) {     //リスト削除処理
                 self.Alist.remove(atOffsets: offsets)   //スライドして削除
-                self.TaskPoint += 1 //削除処理の後ポイントを加算
+            self.TaskPoint.Point += 1 //削除処理の後ポイントを加算
         }
     
         
@@ -87,5 +87,6 @@ struct TabAView: View {
 struct TabAView_Previews: PreviewProvider {//TabAViewのシミュレーター
     static var previews: some View {
         TabAView()
+            .environmentObject(SjAndCn())
     }
 }//TabAViewのシミュレーター終了

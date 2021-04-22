@@ -12,6 +12,9 @@ class SjAndCn : ObservableObject {      //グローバル変数を格納して�
     @Published var  ClassNo: [String] = Array(repeating: "", count: 36)     //グローバル変数として使う、教室名を格納する配列。文字型で、初期値は「”　”」、要素は0~35番目まで
     
     @Published var  Memo: [String] = Array(repeating: "", count: 36)
+    
+    @Published var Point = 0
+    
 }    //クラス終了
 
 

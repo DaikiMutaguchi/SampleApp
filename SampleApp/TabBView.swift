@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct TabBView: View {
+    @EnvironmentObject var TaskPoint: SjAndCn //タスク完了で得られるポイント
     var body: some View {
-        Image("Obake.png")
-            .resizable()//画像をフレームの大きさに合わせる
-            .frame(width: 380.0, height: 700.0, alignment: .leading)
-                    //フレームサイズの指定
+        
+        Text("\(self.TaskPoint.Point)")
     }
 }
 
 struct TabBView_Previews: PreviewProvider {
     static var previews: some View {
         TabBView()
+            .environmentObject(SjAndCn())
     }//TabBViewシミュレーター
 }

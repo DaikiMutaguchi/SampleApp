@@ -145,7 +145,7 @@ struct TableEditView: View {
                 //テキストフィールドに関する設定
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .shadow(color: Memoeditting ? .blue : .clear, radius: 3)
-                .disabled(!Flag)
+               .disabled(!Flag)
                 //設定終了
                 
                 

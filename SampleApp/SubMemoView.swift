@@ -4,7 +4,6 @@
 //
 //  Created by 牟田口大輝 on 2021/02/27.
 //
-
 import SwiftUI
 
 struct SubMemoView: View {
@@ -18,8 +17,25 @@ struct SubMemoView: View {
                 
                 Section(header: Text(Youbi[Date])){
                     ForEach((0...4), id: \.self) { time in
+                        
+                        //１行目の設定
                         Text("\(time+1)限：\(SubMemo.Memo[Date*5+time])")
-                    }
+                        
+                        //２行目の設定
+                        HStack{
+                        //
+                        Text("欠席回数：")
+                        Button(action: {
+                                        //アクション
+                                }) {
+                                    Image(systemName: "plus.circle")   // プラスアイコンを指定
+                                }
+                        Button(action: {
+                                        //アクション
+                                }) {
+                                    Image(systemName: "minus.circle")   // マイナスアイコンを指定
+                                }
+                        }
                 }
             }
         }
@@ -33,4 +49,5 @@ struct SubMemoView_Previews: PreviewProvider {
         SubMemoView()
             .environmentObject(SjAndCn())
     }
+}
 }

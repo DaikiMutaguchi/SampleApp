@@ -47,6 +47,7 @@ struct TabAView: View {
                    .onDelete(perform: self.deleteRow) // 削除処理1呼び出し
                }//リスト表示終了
                 
+                
                 HStack {          // ポイントカウント
                     Text("\(TaskPoint)")
                     Text("ポイント獲得")

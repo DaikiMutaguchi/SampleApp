@@ -48,6 +48,7 @@ struct TabAView: View {
                }//リスト表示終了
                 
                 
+                
                 HStack {          // ポイントカウント
                     Text("\(TaskPoint)")
                     Text("ポイント獲得")

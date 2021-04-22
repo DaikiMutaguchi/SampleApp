@@ -13,7 +13,7 @@ class SjAndCn : ObservableObject {      //グローバル変数を格納して�
     
     @Published var  Memo: [String] = Array(repeating: "", count: 36)
     
-    @Published var Point = 0
+    @Published var Point = 0  //タスク完了数
     
 }    //クラス終了
 

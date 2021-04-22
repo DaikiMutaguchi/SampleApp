@@ -8,8 +8,11 @@ import SwiftUI
 
 struct SubMemoView: View {
     
+    
+    
     let Youbi = ["月曜日" , "火曜日" , "水曜日" , "木曜日" , "金曜日"]
     @EnvironmentObject var SubMemo: SjAndCn //クラスSjAndCnから変数を作成
+   
     
     var body: some View {
         List {
@@ -42,6 +45,7 @@ struct SubMemoView: View {
         .listStyle(SidebarListStyle())// Listの表示スタイル指定
         .navigationBarTitle("授業メモ")
     }
+        
 }
 
 struct SubMemoView_Previews: PreviewProvider {

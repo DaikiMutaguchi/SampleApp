@@ -29,13 +29,15 @@ struct SubMemoView: View {
                         HStack{
                         //
                         Text("欠席回数：\(MAb.Absence[Date*5+time])")
+                        Spacer()
                         Image(systemName: "plus.circle")
                             .onTapGesture {
                                 self.MAb.Absence[Date*5+time] += 1
                                                 }
+                        
                         Image(systemName: "minus.circle")
                             .onTapGesture {
-                                self.MAb.Absence[Date*5+time] += -1
+                                self.MAb.Absence[Date*5+time] -= 1
                             }
                         
                         

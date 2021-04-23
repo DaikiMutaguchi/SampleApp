@@ -12,6 +12,7 @@ struct SubMemoView: View {
     
     let Youbi = ["月曜日" , "火曜日" , "水曜日" , "木曜日" , "金曜日"]
     @EnvironmentObject var SubMemo: SjAndCn //クラスSjAndCnから変数を作成
+    @EnvironmentObject var MAb: SjAndCn //クラスSjAndCnから変数を作成
    
     
     var body: some View {
@@ -27,24 +28,33 @@ struct SubMemoView: View {
                         //２行目の設定
                         HStack{
                         //
-                        Text("欠席回数：")
-                        Button(action: {
-                                        //アクション
-                                }) {
-                                    Image(systemName: "plus.circle")   // プラスアイコンを指定
-                                }
-                        Button(action: {
-                                        //アクション
-                                }) {
-                                    Image(systemName: "minus.circle")   // マイナスアイコンを指定
-                                }
+                        Text("欠席回数：\(MAb.Absence[Date*5+time])")
+                        Image(systemName: "plus.circle")
+                            .onTapGesture {
+                                self.MAb.Absence[Date*5+time] += 1
+                                                }
+                        Image(systemName: "minus.circle")
+                            .onTapGesture {
+                                self.MAb.Absence[Date*5+time] += -1
+                            }
+                        
+                        
+                            
+                        
                         }
                 }
             }
+                
         }
         .listStyle(SidebarListStyle())// Listの表示スタイル指定
         .navigationBarTitle("授業メモ")
+            
+            
+
     }
+        
+        
+        
         
 }
 

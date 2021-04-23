@@ -20,19 +20,33 @@ struct TabBView: View {
                 .frame(width: 400, height: 800)
         
             
-            ForEach((0...19), id: \.self) { Loop in
+            
+            
+            
+            
+           
+            VStack{
                     
              
-                if self.TaskPoint.Point >= GetPoint[Loop]{
+                if self.TaskPoint.Point >= 0{
                     Image("1E93370C-DA49-4A0A-A3EE-0DD87567F2B5")
                         .resizable()
                         .frame(width: 400, height: 300)
                 }
-            
-                
-                
-            
+            if self.TaskPoint.Point >= 1{
+                Image("1E93370C-DA49-4A0A-A3EE-0DD87567F2B5")
+                    .resizable()
+                    .frame(width: 400, height: 300)
             }
+            if self.TaskPoint.Point >= 2{
+                Image("1E93370C-DA49-4A0A-A3EE-0DD87567F2B5")
+                    .resizable()
+                    .frame(width: 400, height: 300)
+            }
+                
+            }
+        
+            
         
             
         }

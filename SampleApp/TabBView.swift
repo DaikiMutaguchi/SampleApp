@@ -14,34 +14,29 @@ struct TabBView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             
-        ZStack{
+        ZStack(alignment: .top){
             Image("TbBG")
                 .resizable()
                 .frame(width: 400, height: 800)
-        
-            
-            
-            
-            
             
            
             VStack{
                     
              
                 if self.TaskPoint.Point >= 0{
-                    Image("1E93370C-DA49-4A0A-A3EE-0DD87567F2B5")
+                    Image("IMG_0461")
                         .resizable()
-                        .frame(width: 400, height: 300)
+                        .frame(width: 400, height: 200)
                 }
             if self.TaskPoint.Point >= 1{
-                Image("1E93370C-DA49-4A0A-A3EE-0DD87567F2B5")
+                Image("IMG_0460")
                     .resizable()
-                    .frame(width: 400, height: 300)
+                    .frame(width: 450, height: 450)
             }
             if self.TaskPoint.Point >= 2{
-                Image("1E93370C-DA49-4A0A-A3EE-0DD87567F2B5")
+                Image("IMG_0460")
                     .resizable()
-                    .frame(width: 400, height: 300)
+                    .frame(width: 450, height: 450)
             }
                 
             }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E0DE84F260B1A1F009A61DF /* ListEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DE84E260B1A1F009A61DF /* ListEntryView.swift */; };
+		1E2CD4692647A138003650C1 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CD4682647A138003650C1 /* CheckBox.swift */; };
 		52E76F8E2589BCD7000B24C0 /* SampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76F8D2589BCD7000B24C0 /* SampleAppApp.swift */; };
 		52E76F902589BCD7000B24C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76F8F2589BCD7000B24C0 /* ContentView.swift */; };
 		52E76F922589BCD8000B24C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E76F912589BCD8000B24C0 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		1E0DE84E260B1A1F009A61DF /* ListEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntryView.swift; sourceTree = "<group>"; };
+		1E2CD4682647A138003650C1 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		52E76F8A2589BCD7000B24C0 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E76F8D2589BCD7000B24C0 /* SampleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppApp.swift; sourceTree = "<group>"; };
 		52E76F8F2589BCD7000B24C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				52E76F912589BCD8000B24C0 /* Assets.xcassets */,
 				52E76F962589BCD8000B24C0 /* Info.plist */,
 				52E76F932589BCD8000B24C0 /* Preview Content */,
+				1E2CD4682647A138003650C1 /* CheckBox.swift */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				52E76FA82589C431000B24C0 /* TabCView.swift in Sources */,
 				1E0DE84F260B1A1F009A61DF /* ListEntryView.swift in Sources */,
 				D2956AB125E9631B0007E833 /* SjAndCn.swift in Sources */,
+				1E2CD4692647A138003650C1 /* CheckBox.swift in Sources */,
 				D2956AB425E965360007E833 /* SceneDelegate.swift in Sources */,
 				D28860E325EA767200ED7D00 /* SubMemoView.swift in Sources */,
 				52E76FA12589BE1D000B24C0 /* TabBView.swift in Sources */,

@@ -47,6 +47,14 @@ struct TabAView: View {
                        Text(user)
                    }
                    .onDelete(perform: self.deleteRow) // 削除処理1呼び出し
+                Button(action: toggle) {
+                            if(isChecked) {
+                                Image(systemName: "checkmark.square.fill")
+                            .foregroundColor(.green)
+                            } else {
+                                Image(systemName: "square")
+                            }
+                        }
                }//リスト表示終了
                 
                 

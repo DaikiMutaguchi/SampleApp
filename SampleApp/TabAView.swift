@@ -47,9 +47,11 @@ struct TabAView: View {
                     HStack{
                         Button(action: toggle) {
                                     if(isChecked) {
+                                       
                                         Image(systemName: "checkmark.square.fill")
-                                            
+                                        
                                     .foregroundColor(.green)
+                                        
                                     } else {
                                         Image(systemName: "square")
                                     }

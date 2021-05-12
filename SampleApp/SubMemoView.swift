@@ -38,7 +38,7 @@ struct SubMemoView: View {
                         Image(systemName: "minus.circle")
                             .onTapGesture {
                                 self.MAb.Absence[Date*5+time] -= 1
-                            }
+                            }.disabled(MAb.Absence[Date*5+time]==0)
                         
                         
                             

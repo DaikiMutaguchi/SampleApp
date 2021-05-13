@@ -30,11 +30,13 @@ struct TabAView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle()) //入力フィールドを線で囲む
                         Button(action: { //Doneボタン
                            self.Alist.append(self.NewAlist)//配列に要素を追加
-                            
+                            UIImpactFeedbackGenerator(style: .medium)
+                            .impactOccurred()
                            self.NewAlist = ""//入力フィールドを空に
                         }) {
                            Text("Done")//ボタンのスタイル
                                .buttonStyle(BorderlessButtonStyle())
+                            
                         }.disabled(NewAlist.isEmpty)  //文字が入力されてない時は押せない
                    }//入力フィールドとDoneボタンの横並び終了
                     

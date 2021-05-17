@@ -42,7 +42,7 @@ struct SubMemoView: View {
                                 self.MAb.Absence[Date*5+time] -= 1
                                 UIImpactFeedbackGenerator(style: .medium)
                                 .impactOccurred()
-                            }.disabled(MAb.Absence[Date*5+time]==0)
+                            }.disabled(MAb.Absence[Date*5+time]<=0)
                         
                         
                             

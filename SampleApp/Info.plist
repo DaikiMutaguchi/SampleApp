@@ -32,6 +32,8 @@
 		<key>UIImageName</key>
 		<string>BootLogo</string>
 	</dict>
+	<key>ImageName</key>
+	<string>BootLogo</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

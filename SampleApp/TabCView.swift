@@ -19,6 +19,7 @@ struct TabCView: View {
             
             Spacer()
             Spacer()
+            Spacer()
             
             //横に下のVStack①を並べる
             HStack{

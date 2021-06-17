@@ -15,6 +15,11 @@ struct TabCView: View {
     var body: some View {
         //ナビゲーションビューの開始
         NavigationView  {
+            
+            ZStack{ // 背景色指定
+                Color(red: 0.92, green: 0.96, blue:1.0).edgesIgnoringSafeArea(.all)
+                
+            
         ScrollView(.vertical, showsIndicators: false) { //縦画面サイズ調整(iPhone 8用)
             
             Spacer()
@@ -89,6 +94,7 @@ struct TabCView: View {
             }//HStack終了
             
         }//スクロールビュー終了
+            }// 背景色用
         .navigationBarTitle("My時間割") //ナビゲーションバーにタイトル設定
         
         .toolbar { //バーにアイコンを設定

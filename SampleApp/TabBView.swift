@@ -28,15 +28,33 @@ struct TabBView: View {
                         .resizable()
                         .frame(width: 400, height: 200)
                 }
+                
+                
+                HStack{
             if self.TaskPoint.Point >= 1{
                 Image("IMG_0460")
                     .resizable()
-                    .frame(width: 450, height: 450)
+                    .frame(width: 200, height: 200)
             }
             if self.TaskPoint.Point >= 2{
                 Image("IMG_0460")
                     .resizable()
-                    .frame(width: 450, height: 450)
+                    .frame(width: 200, height: 200)
+            }
+                
+            }
+                
+                
+                HStack{
+            if self.TaskPoint.Point >= 3{
+                Image("IMG_0460")
+                    .resizable()
+                    .frame(width: 180, height: 180)
+            }
+            if self.TaskPoint.Point >= 4{
+                Image("IMG_0460")
+                    .resizable()
+                    .frame(width: 180, height: 180)
             }
                 
             }
@@ -54,4 +72,5 @@ struct TabBView_Previews: PreviewProvider {
         TabBView()
             .environmentObject(SjAndCn())
     }//TabBViewシミュレーター
+}
 }

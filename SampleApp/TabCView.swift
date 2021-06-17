@@ -17,7 +17,7 @@ struct TabCView: View {
         NavigationView  {
             
             ZStack{ // 背景色指定
-                Color(red: 0.92, green: 0.96, blue:1.0).edgesIgnoringSafeArea(.all)
+                Color(red: 0.88, green: 0.96, blue:1.0).edgesIgnoringSafeArea(.all)
                 
             
         ScrollView(.vertical, showsIndicators: false) { //縦画面サイズ調整(iPhone 8用)
@@ -39,7 +39,7 @@ struct TabCView: View {
                             Image("Youbi")
                                 .resizable()
                                 .frame(width: 65, height: 20)
-                            Text(Youbi[Date]) //配列Youbiの0~4番めの値表示
+                            Text(Youbi[Date]) .foregroundColor(.white)//配列Youbiの0~4番めの値表示
                     
                         }
                         

@@ -40,9 +40,10 @@ struct TableEditView: View {
     
     var body: some View {
        // NavigationView {    // Formで使う場合はNavigationViewが必須
-            
+       
             //Form{ ここをフォームにするのかListにするのかで表示が変わる
-            Form {   //フォームの開始
+            Form {
+               //フォームの開始
                 Picker(selection: $Dselection, label: Text("曜日")) {  //曜日選択のためのPicker
                     ForEach(0 ..< Date.count) { num1 in  //配列Dateの０番目の要素からピッカーに表示
                         Text(self.Date[num1])  //ピッカーで選択したら、選択した項目を表示する
@@ -162,7 +163,9 @@ struct TableEditView: View {
             
             .navigationBarTitle("時間割の編集")
       //  }    // フォーム用ナビゲーションリンク終了
-    }    //body
+    }
+    
+    //body
 }    //View
 
 struct TableEditView_Previews: PreviewProvider {

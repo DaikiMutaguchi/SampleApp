@@ -19,7 +19,10 @@ struct SheetView: View {
             Text("閉じる")
         }
         Text("おばけ情報\(self.ObakePoint.Obake)ページめ")
-        
+        Image("Obake\(self.ObakePoint.Obake)")
+            .resizable()
+            .frame(width: 350, height: 350)
     }
 }
+
 

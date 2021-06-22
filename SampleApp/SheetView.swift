@@ -9,6 +9,16 @@ import SwiftUI
 
 //１個目
 struct SheetView: View {
+    
+    
+    let ObakeName = ["ダミー", "おさるオバケ", "水曜日", "木曜日",
+                     "金曜日" , "たぬきおばけ"]
+    
+    
+    
+    
+    
+    
     @Binding var isShowingSheet : Bool
     @EnvironmentObject var ObakePoint: SjAndCn
     

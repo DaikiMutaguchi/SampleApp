@@ -8,30 +8,18 @@
 import SwiftUI
 
 //１個目
-struct SheetView1: View {
-    @Binding var isShowingSheet1 : Bool
+struct SheetView: View {
+    @Binding var isShowingSheet : Bool
+    @EnvironmentObject var ObakePoint: SjAndCn
+    
     var body: some View {
         Button(action:{
-                self.isShowingSheet1 = false
+                self.isShowingSheet = false
                })  {
             Text("閉じる")
         }
-        Text("おばけ情報1ページめ")
+        Text("おばけ情報\(self.ObakePoint.Obake)ページめ")
+        
     }
 }
 
-//2個目
-struct SheetView2: View {
-    
-    @Binding var isShowingSheet2 : Bool
-    var body: some View {
-        
-        Button(action:{
-                self.isShowingSheet2 = false
-               
-        })  {
-            Text("閉じる")
-        }
-        Text("おばけ情報２ページめ")
-            }
-}

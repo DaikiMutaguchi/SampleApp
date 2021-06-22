@@ -94,13 +94,23 @@ struct TabAView: View {
     
         func deleteRow(offsets: IndexSet) {     //リスト削除処理
                 self.Alist.remove(atOffsets: offsets)   //スライドして削除
-            self.TaskPoint.Point += 1 //削除処理の後ポイントを加算
+            
         }
         // タップ時の状態の切り替え
         func toggle() -> Void {
             isChecked = !isChecked
             UIImpactFeedbackGenerator(style: .medium)
                 .impactOccurred()
+            self.TaskPoint.Point += 1
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                //
+                //ここに行を削除する処理書いたら完璧じゃない？
+                //
+                
+                isChecked = false
+            }
+            
         }
     
         

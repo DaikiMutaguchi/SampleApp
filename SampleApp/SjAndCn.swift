@@ -17,6 +17,8 @@ class SjAndCn : ObservableObject {      //グローバル変数を格納して�
     
     @Published var Point = 0  //タスク完了数
     
+    @Published var Obake = 0  //おばけ詳細表示
+    
 }    //クラス終了
 
 

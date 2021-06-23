@@ -34,6 +34,13 @@ struct TableEditSheet: View {
     
     @EnvironmentObject var TimeTable: SjAndCn
     
+    
+    @EnvironmentObject var SubMemo: SjAndCn //クラスSjAndCnから変数を作成
+    @EnvironmentObject var MAb: SjAndCn //クラスSjAndCnから変数を作成
+    
+    
+    
+    
     func MemoDelete(){
         self.EMemo.Memo[TimeTable.Table] = ""
     }
@@ -117,7 +124,7 @@ struct TableEditSheet: View {
                 Text(EMemo.Memo[TimeTable.Table])
                     .font(.system(.headline, design: .rounded))
                     
-                TextField("１５文字以内で入力", text: $Memoname,
+                TextField("メモを入力して下さい", text: $Memoname,
                               
                         onEditingChanged: { begin in
                             
@@ -142,8 +149,53 @@ struct TableEditSheet: View {
                 }
                 
                 
+                HStack{
+                //
+               
+                    if self.MAb.Absence[TimeTable.Table] >= 5{
+                        Text("欠席回数：\(MAb.Absence[TimeTable.Table])")
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.red)
+                    }
                     
+                    else if self.MAb.Absence[TimeTable.Table] >= 3{
+                        Text("欠席回数：\(MAb.Absence[TimeTable.Table])")
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.orange)
+                    }
+                    
+                    else{
+                        Text("欠席回数：\(MAb.Absence[TimeTable.Table])")
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.green)
+                    }
+                Spacer()
+                Image(systemName: "plus.circle")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.blue)
+                    .onTapGesture {
+                        
+                        self.MAb.Absence[TimeTable.Table] += 1
+                        UIImpactFeedbackGenerator(style: .medium)
+                        .impactOccurred()
+                                        }
                 
+                Image(systemName: "minus.circle")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.blue)
+                    .onTapGesture {
+                        self.MAb.Absence[TimeTable.Table] -= 1
+                        UIImpactFeedbackGenerator(style: .medium)
+                        .impactOccurred()
+                    }.disabled(MAb.Absence[TimeTable.Table]<=0)
+                
+                
+                    
+                }
                 
                   
                 

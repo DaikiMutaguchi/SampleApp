@@ -11,6 +11,7 @@ struct TabCView: View {
     let Youbi = ["月" , "火" , "水" , "木" , "金"]
     @EnvironmentObject var CSubTitle: SjAndCn //クラスSjAndCnから変数を作成
     @EnvironmentObject var CClassNo: SjAndCn  //クラスSjAndCnから変数を作成
+    @State private var isShowingEditSheet: Bool = false
     
     var body: some View {
         //ナビゲーションビューの開始
@@ -53,9 +54,27 @@ struct TabCView: View {
                             //NavigationLink(destination:TBDataView()){
                             
                             ZStack {//Zstack②
-                                Image("TbBG")
-                                        .resizable()
-                                        .frame(width: 65, height: 100)
+                                
+                                
+                                Button(action:{
+                                    self.isShowingEditSheet = true
+                                    
+                                })
+                                {
+                                    Image("TbBG")
+                                            .resizable()
+                                            .frame(width: 65, height: 100)
+
+                                }
+                                .sheet(isPresented: $isShowingEditSheet)
+                                {
+                                    TableEditSheet(isShowingEditSheet: self.$isShowingEditSheet)
+                                }
+                                
+                                
+                                
+                                
+                                
                                 
                                 VStack{
                                     

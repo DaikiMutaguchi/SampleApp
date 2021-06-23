@@ -162,7 +162,7 @@ struct TableEditSheet: View {
                 
         
         
-        
+            }//form
         
         
         
@@ -173,6 +173,6 @@ struct TableEditSheet: View {
             Text("閉じる")
         }
         
-    }//form
+    
     }//body
 }

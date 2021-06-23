@@ -84,17 +84,7 @@ struct TabCView: View {
                                 // .border(Color.red, width: 2)   // フレームに枠線をつけて可視化（アウト済）
                                     
                                     
-                                //Text(CClassNo.ClassNo[Date*5+time])
-                             //       .italic()
-                              //      .underline(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, color: Color.red)
-                                    //.background(Color.blue)
-                                //    .frame(width: 65, height:20 ,  alignment: .center )  // フレームの設定
-                                    
-                                    
-                                 //   .border(Color.green, width: 2) //枠線の可視化（アウト済）
-                                    
-                                    
-                                    
+                             
                                 Text(CClassNo.ClassNo[Date*5+time])
                                    .frame(width: 65, height:20 ,  alignment: .center )  // フレームの設定
                                //  .border(Color.green, width: 2) //枠線の可視化（アウト済）

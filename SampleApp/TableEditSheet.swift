@@ -40,9 +40,9 @@ struct TableEditSheet: View {
     }
     
     var body: some View {
-       // NavigationView {    // Formで使う場合はNavigationViewが必須
+     
        
-            //Form{ ここをフォームにするのかListにするのかで表示が変わる
+            Text("月曜日１限")
             Form {
                //フォームの開始
                 Picker(selection: $Dselection, label: Text("曜日")) {  //曜日選択のためのPicker

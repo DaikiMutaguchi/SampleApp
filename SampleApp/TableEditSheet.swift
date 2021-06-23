@@ -180,7 +180,8 @@ struct TableEditSheet: View {
                         self.MAb.Absence[TimeTable.Table] += 1
                         UIImpactFeedbackGenerator(style: .medium)
                         .impactOccurred()
-                                        }
+                                    }
+                    .disabled(MAb.Absence[TimeTable.Table]>=15)
                 
                 Image(systemName: "minus.circle")
                     .resizable()
@@ -191,7 +192,9 @@ struct TableEditSheet: View {
                         self.MAb.Absence[TimeTable.Table] -= 1
                         UIImpactFeedbackGenerator(style: .medium)
                         .impactOccurred()
-                    }.disabled(MAb.Absence[TimeTable.Table]<=0)
+                    }
+                    .disabled(MAb.Absence[TimeTable.Table]<=0)
+                   
                 
                 
                     
@@ -209,6 +212,7 @@ struct TableEditSheet: View {
         
         Button(action:{
                 self.isShowingEditSheet = false
+          
                })  {
             Text("閉じる")
         }

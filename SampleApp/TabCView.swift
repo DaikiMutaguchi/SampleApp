@@ -60,6 +60,8 @@ struct TabCView: View {
                                 Button(action:{
                                     self.isShowingEditSheet = true
                                     self.TimeTable.Table = Date*5+time
+                                    UIImpactFeedbackGenerator(style: .medium)
+                                    .impactOccurred()
                                     
                                 })
                                 {

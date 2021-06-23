@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct TableEditSheet: View {
-    let Youbi = ["月","火","水","木","金"] //Pickerの項目を設定
-    let Jikan = ["ダミー","１限","２限","３限","４限","５限" , "(選択して下さい)"]    //Pickerの項目を設定
+    let Youbi = ["月","火","水","木","金"] //タイトル部分の科目名
     
     
     @EnvironmentObject var ESubTitle: SjAndCn    //クラスSjAndCnから、変数ESubJectを設定

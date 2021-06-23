@@ -21,6 +21,7 @@ class SjAndCn : ObservableObject {      //グローバル変数を格納して�
     
     @Published var Table = 0  //時間割識別(TaBCView)
     
+    @Published var  Flag: [Bool] = Array(repeating: false, count: 25)
     
     
 }    //クラス終了

@@ -15,8 +15,6 @@ struct TableEditSheet: View {
     @EnvironmentObject var EClassNo: SjAndCn    //クラスSjAndCnから、変数EClassNoを設定
     @EnvironmentObject var EMemo: SjAndCn    //クラスSjAndCnから、変数ESubJectを設定
     
-    @State private var Dselection = 5   //Pickerで選んだ配列Dateの要素番号が代入される。初期値は５の（未選択）
-    @State private var Jselection = 5   //Pickerで選んだ配列Jikanの要素番号が代入される。初期値は５の（未選択）
     @State var subname : String = ""
     @State var subeditting = false      //科目名のテキストフィールドを編集しているかどうか
     
@@ -27,8 +25,8 @@ struct TableEditSheet: View {
     @State var Memoeditting = false      //科目名のテキストフィールドを編集しているかどうか
     
     
-    @State private var Flag = false
-    
+   
+    @EnvironmentObject var Flag: SjAndCn
     @State private var Delete : String = ""
     
     @Binding var isShowingEditSheet : Bool
@@ -37,7 +35,7 @@ struct TableEditSheet: View {
     @EnvironmentObject var TimeTable: SjAndCn
     
     func MemoDelete(){
-        self.EMemo.Memo[Dselection*5+Jselection] = ""
+        self.EMemo.Memo[TimeTable.Table] = ""
     }
     
     var body: some View {
@@ -110,11 +108,11 @@ struct TableEditSheet: View {
                 //設定終了
                 
                 
-                Toggle(isOn:$Flag) {
+                Toggle(isOn:$Flag.Flag[TimeTable.Table]) {
                                 Text("授業メモの追加／編集")
                                 
                 }
-                if Flag {
+                if Flag.Flag[TimeTable.Table] {
                 
                 Text(EMemo.Memo[TimeTable.Table])
                     .font(.system(.headline, design: .rounded))
@@ -137,7 +135,7 @@ struct TableEditSheet: View {
                 //テキストフィールドに関する設定
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .shadow(color: Memoeditting ? .blue : .clear, radius: 3)
-               .disabled(!Flag)
+               .disabled(!Flag.Flag[TimeTable.Table])
                 //設定終了
                 
                 

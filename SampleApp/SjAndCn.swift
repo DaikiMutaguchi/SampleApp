@@ -19,6 +19,10 @@ class SjAndCn : ObservableObject {      //グローバル変数を格納して�
     
     @Published var Obake = 0  //おばけ詳細表示
     
+    @Published var Table = 0  //時間割識別(TaBCView)
+    
+    
+    
 }    //クラス終了
 
 

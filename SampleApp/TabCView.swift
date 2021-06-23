@@ -12,6 +12,7 @@ struct TabCView: View {
     @EnvironmentObject var CSubTitle: SjAndCn //クラスSjAndCnから変数を作成
     @EnvironmentObject var CClassNo: SjAndCn  //クラスSjAndCnから変数を作成
     @State private var isShowingEditSheet: Bool = false
+    @EnvironmentObject var TimeTable: SjAndCn
     
     var body: some View {
         //ナビゲーションビューの開始
@@ -58,6 +59,7 @@ struct TabCView: View {
                                 
                                 Button(action:{
                                     self.isShowingEditSheet = true
+                                    self.TimeTable.Table = Date*5+time
                                     
                                 })
                                 {

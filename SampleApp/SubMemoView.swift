@@ -28,16 +28,25 @@ struct SubMemoView: View {
                         //２行目の設定
                         HStack{
                         //
-                        Text("欠席回数：\(MAb.Absence[Date*5+time])")
+                        Text("欠席回数：\(MAb.Absence[Date*5+time])").fontWeight(.semibold)
                         Spacer()
                         Image(systemName: "plus.circle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.blue)
                             .onTapGesture {
+                                
                                 self.MAb.Absence[Date*5+time] += 1
                                 UIImpactFeedbackGenerator(style: .medium)
                                 .impactOccurred()
                                                 }
                         
                         Image(systemName: "minus.circle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.blue)
                             .onTapGesture {
                                 self.MAb.Absence[Date*5+time] -= 1
                                 UIImpactFeedbackGenerator(style: .medium)

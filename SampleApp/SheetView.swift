@@ -16,22 +16,26 @@ struct SheetView: View {
     
     
     
-    
-    
-    
+
     @Binding var isShowingSheet : Bool
     @EnvironmentObject var ObakePoint: SjAndCn
     
     var body: some View {
+        
+      
+        Text("おばけ情報\(self.ObakePoint.Obake)ページめ")
+        Image("Obake\(self.ObakePoint.Obake)")
+            .resizable()
+            .frame(width: 350, height: 350)
+        Text(ObakeName[self.ObakePoint.Obake])
+        
+        
         Button(action:{
                 self.isShowingSheet = false
                })  {
             Text("閉じる")
         }
-        Text("おばけ情報\(self.ObakePoint.Obake)ページめ")
-        Image("Obake\(self.ObakePoint.Obake)")
-            .resizable()
-            .frame(width: 350, height: 350)
+        
     }
 }
 

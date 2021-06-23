@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct SwiftUIAppSample: App {
     // swiftlint:disable weak_delegate
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate  // 追加する
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate 
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -18,7 +18,6 @@ struct SwiftUIAppSample: App {
     }
 }
 
-// 以下を追加する
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         

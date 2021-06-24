@@ -34,7 +34,7 @@ struct TabBView: View {
                 }
                 
                 
-                HStack{
+                HStack(spacing: 5) {
             if self.TaskPoint.Point >= 1{
                 
                 
@@ -86,12 +86,12 @@ struct TabBView: View {
             if self.TaskPoint.Point >= 3{
                 Image("IMG_0460")
                     .resizable()
-                    .frame(width: 180, height: 180)
+                    .frame(width: 200, height: 200)
             }
             if self.TaskPoint.Point >= 4{
                 Image("IMG_0460")
                     .resizable()
-                    .frame(width: 180, height: 180)
+                    .frame(width: 200, height: 200)
             }
                 
             }

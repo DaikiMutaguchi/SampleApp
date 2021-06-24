@@ -120,10 +120,10 @@ struct TabCView: View {
                 NavigationLink(destination:TableEditView()){ //↓のアイコンにナビゲーションリンクを設定
                     Image(systemName: "rectangle.and.pencil.and.ellipsis")   //アイコンの設定
                 }
-            }//
+            }
             
             
-        }//ツールばー終了
+        }
             
             
         }//ナビゲーションビュー終了

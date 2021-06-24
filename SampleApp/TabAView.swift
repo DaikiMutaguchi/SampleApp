@@ -15,14 +15,17 @@ struct TabAView: View {
         @EnvironmentObject var TaskPoint: SjAndCn //タスク完了で得られるポイント
         var body: some View {   //bodyの開始
 
-           
+            ZStack{ // 背景色指定
+                Color(red: 0.88, green: 0.96, blue:1.0).edgesIgnoringSafeArea(.all)
             VStack{
                 VStack(alignment: .leading) {//テキストとその下の要素を縦に並べる
                     Text("ToDoList")
                         .font(.system(size: 40, weight: .black, design: .rounded))
-                    Text("課題をリストに追加しよう！")
-                       .font(.footnote)
-                       .foregroundColor(.gray)
+                        .padding(10)
+                        .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
+                    //Text("課題をリストに追加しよう！")
+                     //  .font(.footnote)
+                     //  .foregroundColor(.gray)
                     
                     HStack {//入力フィールドとDoneボタンを横に並べる
                         TextField("ToDoを入力", text: $NewAlist) //入力タスクをフィールドに
@@ -33,8 +36,11 @@ struct TabAView: View {
                             .impactOccurred()
                            self.NewAlist = ""//入力フィールドを空に
                         }) {
-                           Text("Done")//ボタンのスタイル
-                               .buttonStyle(BorderlessButtonStyle())
+                            Image(systemName: "plus.circle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 30, height: 30)
+                                .foregroundColor(.blue)
                             
                         }.disabled(NewAlist.isEmpty)  //文字が入力されてない時は押せない
                    }//入力フィールドとDoneボタンの横並び終了
@@ -43,8 +49,13 @@ struct TabAView: View {
                }.padding([.leading, .trailing])
                 //テキストからDoneボタンまでの配置終了、両端にスペースを設ける
 
+                ZStack(alignment: .bottomTrailing) {
+                    
+                   
                 List{
+                   
                 ForEach(Alist.filter { !$0.isEmpty }, id: \.self){ user in
+                    
                     HStack{
                         Button(action: toggle) {
                                     if(isChecked) {
@@ -58,14 +69,36 @@ struct TabAView: View {
                                     }
                                 }
                         Text(user)
+                            .font(.system(size: 20))
+                            .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
+                          
                     }
-                   }
+                     
+                   
+                }.onDelete(perform: self.deleteRow) // 削除処理1呼び出し
                 
-                   .onDelete(perform: self.deleteRow) // 削除処理1呼び出し
+                .listRowBackground(Color.init(red: 1.0, green: 1.0, blue: 1.0))
+                
+                
+                      
+                    
+             }.listStyle(InsetGroupedListStyle())
+                .onAppear {
+                    UITableView.appearance().backgroundColor = UIColor(red: 0.88, green: 0.96, blue:1.0 ,alpha: 1.0)
+                    
                 }
-              
-                
-                
+                .onDisappear {
+                }
+                    
+                   
+               
+                }
+                Image("Obake1")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 120, height: 120)
+                    .opacity(1.0)
+                    .offset(x: 130, y: 0)
                 
                 HStack {          // ポイントカウント
                     Text("\(TaskPoint.Point)")
@@ -78,16 +111,17 @@ struct TabAView: View {
             }
             
            
-         
+            }
             
             
        }//bodyの終了
     
     
         func deleteRow(offsets: IndexSet) {     //リスト削除処理
-                self.Alist.remove(atOffsets: offsets)   //スライドして削除
-            
-        }
+            self.Alist.remove(atOffsets: offsets)   //スライドして削除
+            }
+    
+    
         // タップ時の状態の切り替え
         func toggle() -> Void {
             isChecked = !isChecked

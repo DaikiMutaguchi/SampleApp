@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct TabAView: View {
-        @State var Alist: [String] = ["","要素くん１号",""]//リストを並べる
+        @State var Alist: [String] = Array(repeating: "", count: 200)
         @State var NewAlist = ""   //ユーザーに入力してもらう
         @State private var isChecked = false
+        @State var i = 0
     
         @EnvironmentObject var TaskPoint: SjAndCn //タスク完了で得られるポイント
         var body: some View {   //bodyの開始
@@ -23,18 +24,22 @@ struct TabAView: View {
                         .font(.system(size: 40, weight: .black, design: .rounded))
                         .padding(10)
                         .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
-                    //Text("課題をリストに追加しよう！")
-                     //  .font(.footnote)
-                     //  .foregroundColor(.gray)
+                   
                     
                     HStack {//入力フィールドとDoneボタンを横に並べる
                         TextField("ToDoを入力", text: $NewAlist) //入力タスクをフィールドに
                             .textFieldStyle(RoundedBorderTextFieldStyle()) //入力フィールドを線で囲む
+                        
+                        
                         Button(action: { //Doneボタン
-                           self.Alist.append(self.NewAlist)//配列に要素を追加
+                           self.Alist[i] = NewAlist//配列に要素を追加
+                            
+                            
                             UIImpactFeedbackGenerator(style: .medium)
                             .impactOccurred()
                            self.NewAlist = ""//入力フィールドを空に
+                           self.i += 1
+                            
                         }) {
                             Image(systemName: "plus.circle")
                                 .resizable()

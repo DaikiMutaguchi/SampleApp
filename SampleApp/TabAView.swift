@@ -40,7 +40,7 @@ struct TabAView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 30, height: 30)
-                                .foregroundColor(.blue)
+                              
                             
                         }.disabled(NewAlist.isEmpty)  //文字が入力されてない時は押せない
                    }//入力フィールドとDoneボタンの横並び終了
@@ -115,9 +115,10 @@ struct TabAView: View {
        }//bodyの終了
     
     
-        func deleteRow(offsets: IndexSet) {     //リスト削除処理
-            self.Alist.remove(atOffsets: offsets)   //スライドして削除
-            }
+    
+    func deleteRow(offsets: IndexSet) {     //リスト削除処理
+        self.Alist.remove(atOffsets: offsets)   //スライドして削除
+        }
     
     
         // タップ時の状態の切り替え
@@ -140,8 +141,6 @@ struct TabAView: View {
     
         
     }//TabAView終了
-
-
 
 struct TabAView_Previews: PreviewProvider {//TabAViewのシミュレーター
     static var previews: some View {

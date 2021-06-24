@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct TabAView: View {
-        @State var Alist: [String] = Array(repeating: "", count: 200)
+    @State var Alist: [String] = Array(repeating: "", count: 200)
+   
         @State var NewAlist = ""   //ユーザーに入力してもらう
         @State private var isChecked = false
         @State var i = 0
     
         @EnvironmentObject var TaskPoint: SjAndCn //タスク完了で得られるポイント
+   
         var body: some View {   //bodyの開始
 
             ZStack{ // 背景色指定
@@ -33,6 +35,7 @@ struct TabAView: View {
                         
                         Button(action: { //Doneボタン
                            self.Alist[i] = NewAlist//配列に要素を追加
+                            
                             
                             
                             UIImpactFeedbackGenerator(style: .medium)
@@ -55,8 +58,10 @@ struct TabAView: View {
                 //テキストからDoneボタンまでの配置終了、両端にスペースを設ける
 
                 ZStack(alignment: .bottomTrailing) {
+                
                     
-                   
+                    
+           
                 List{
                    
                 ForEach(Alist.filter { !$0.isEmpty }, id: \.self){ user in
@@ -74,8 +79,10 @@ struct TabAView: View {
                                     }
                                 }
                         Text(user)
+                            
                             .font(.system(size: 20))
                             .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
+                        
                           
                     }
                      
@@ -95,7 +102,7 @@ struct TabAView: View {
                 .onDisappear {
                 }
                     
-                  
+              
                         
                        
                
@@ -132,6 +139,7 @@ struct TabAView: View {
             UIImpactFeedbackGenerator(style: .medium)
                 .impactOccurred()
             self.TaskPoint.Point += 1
+          
            
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {

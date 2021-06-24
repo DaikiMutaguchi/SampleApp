@@ -90,14 +90,12 @@ struct TabAView: View {
                 .onDisappear {
                 }
                     
-                   
+                  
+                        
+                       
                
                 }
-                Image("Obake1")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 120, height: 120)
-                    .opacity(1.0)
+                Image("Listicon")
                     .offset(x: 130, y: 0)
                 
                 HStack {          // ポイントカウント

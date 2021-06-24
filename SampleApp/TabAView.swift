@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct TabAView: View {
-        @State var Alist: [String] = []//リストを並べる
+        @State var Alist: [String] = ["","要素くん１号",""]//リストを並べる
         @State var NewAlist = ""   //ユーザーに入力してもらう
         @State private var isChecked = false
     
         @EnvironmentObject var TaskPoint: SjAndCn //タスク完了で得られるポイント
         var body: some View {   //bodyの開始
 
-        NavigationView{
-
-            VStack(alignment: .leading) { //操作部とリストを縦に並べる
-
+           
+            VStack{
                 VStack(alignment: .leading) {//テキストとその下の要素を縦に並べる
-                    
+                    Text("ToDoList")
+                        .font(.system(size: 40, weight: .black, design: .rounded))
                     Text("課題をリストに追加しよう！")
                        .font(.footnote)
                        .foregroundColor(.gray)
@@ -44,15 +43,15 @@ struct TabAView: View {
                }.padding([.leading, .trailing])
                 //テキストからDoneボタンまでの配置終了、両端にスペースを設ける
 
-               List {//リスト表示
-                   ForEach(Alist, id: \.self) { user in
+                List{
+                ForEach(Alist.filter { !$0.isEmpty }, id: \.self){ user in
                     HStack{
                         Button(action: toggle) {
                                     if(isChecked) {
                                        
                                         Image(systemName: "checkmark.square.fill")
-                                        
-                                    .foregroundColor(.green)
+                                            .foregroundColor(.green)
+                                    
                                         
                                     } else {
                                         Image(systemName: "square")
@@ -61,9 +60,10 @@ struct TabAView: View {
                         Text(user)
                     }
                    }
-                   .onDelete(perform: self.deleteRow) // 削除処理1呼び出し
                 
-               }//リスト表示終了
+                   .onDelete(perform: self.deleteRow) // 削除処理1呼び出し
+                }
+              
                 
                 
                 
@@ -74,19 +74,11 @@ struct TabAView: View {
                         Text("リセット")
                     }
                 }
-            }//操作部とリストの縦並び終了
+       
+            }
             
-            
-           .navigationTitle("ToDoリスト")
-            
-                .toolbar {   //
-                    ToolbarItem(placement: .navigationBarTrailing){
-                        NavigationLink(destination:CheckBox()){
-                            Text("追加")   //遷移ボタン
-                        }
-                    }
-                }
-            }//ナビゲーションビューの終了
+           
+         
             
             
        }//bodyの終了
@@ -102,6 +94,7 @@ struct TabAView: View {
             UIImpactFeedbackGenerator(style: .medium)
                 .impactOccurred()
             self.TaskPoint.Point += 1
+           
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 //

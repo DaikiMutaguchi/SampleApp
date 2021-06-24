@@ -14,13 +14,13 @@ struct TabCView: View {
     @State private var isShowingEditSheet: Bool = false
     @EnvironmentObject var TimeTable: SjAndCn
     
+    
     var body: some View {
         //ナビゲーションビューの開始
         NavigationView  {
             
             ZStack{ // 背景色指定
                 Color(red: 0.88, green: 0.96, blue:1.0).edgesIgnoringSafeArea(.all)
-                
             
         ScrollView(.vertical, showsIndicators: false) { //縦画面サイズ調整(iPhone 8用)
             
@@ -77,9 +77,6 @@ struct TabCView: View {
                                 
                                 
                                 
-                                
-                                
-                                
                                 VStack{
                                     
                                 Text(CSubTitle.SubTitle[Date*5+time])
@@ -123,11 +120,10 @@ struct TabCView: View {
                 NavigationLink(destination:TableEditView()){ //↓のアイコンにナビゲーションリンクを設定
                     Image(systemName: "rectangle.and.pencil.and.ellipsis")   //アイコンの設定
                 }
-            }
+            }//
             
             
-            
-        }
+        }//ツールばー終了
             
             
         }//ナビゲーションビュー終了

@@ -87,7 +87,7 @@ struct TableEditView: View {
                 .shadow(color: subeditting ? .blue : .clear, radius: 3)     // 編集フラグがONの時に枠に影を付ける
                 //設定終了
                     
-        
+                
                 
                 HStack{    //教室名表示
                     Text("教室")

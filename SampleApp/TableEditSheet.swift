@@ -46,10 +46,16 @@ struct TableEditSheet: View {
     }
     
     var body: some View {
-     
-       
+        ZStack{ // 背景色指定
+            Color(red: 0.88, green: 0.96, blue:1.0).edgesIgnoringSafeArea(.all)
+            
+            
+            VStack{
+                        
             Text(Youbi[TimeTable.Table/5]+"曜日"+"\(TimeTable.Table%5+1)限")
                 .font(.system(size: 50, weight: .black, design: .rounded))
+                .padding(20)
+            
         
             Form { //フォームの開始
                 
@@ -216,7 +222,12 @@ struct TableEditSheet: View {
                })  {
             Text("閉じる")
         }
+        }
+        }
+
+    }//body
+        
+     
         
     
-    }//body
 }

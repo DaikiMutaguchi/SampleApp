@@ -24,7 +24,7 @@ struct TabAView: View {
                 VStack(alignment: .leading) {//テキストとその下の要素を縦に並べる
                     Text("ToDoList")
                         .font(.system(size: 40, weight: .black, design: .rounded))
-                        .padding(10)
+                        .padding(15)
                         .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
                    
                     

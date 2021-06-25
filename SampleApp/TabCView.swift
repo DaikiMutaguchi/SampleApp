@@ -17,15 +17,22 @@ struct TabCView: View {
     
     var body: some View {
         //ナビゲーションビューの開始
-        NavigationView  {
+        
             
             ZStack{ // 背景色指定
                 Color(red: 0.88, green: 0.96, blue:1.0).edgesIgnoringSafeArea(.all)
             
         ScrollView(.vertical, showsIndicators: false) { //縦画面サイズ調整(iPhone 8用)
             
-            Spacer()
-            Spacer()
+            VStack(alignment: .leading){
+                Text("My時間割")
+                    .font(.system(size: 40, weight: .black))
+                    .padding(15)
+                    .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
+            
+            
+            
+            
            
             
             //横に下のVStack①を並べる
@@ -105,28 +112,14 @@ struct TabCView: View {
             
         }//スクロールビュー終了
             }// 背景色用
-        .navigationBarTitle("My時間割") //ナビゲーションバーにタイトル設定
+      
+            
+            
+            
         
-        .toolbar { //バーにアイコンを設定
-                ToolbarItem(placement: .navigationBarTrailing){  //アイテムをバーの右側に配置
-                   
-                    NavigationLink(destination:SubMemoView()){ //↓のアイコンにナビゲーションリンクを設定
-                        
-                        Image(systemName: "note.text")   //アイコンの設定
-                    }
-                }
-            
-            ToolbarItem(placement: .navigationBarTrailing){  //アイテムをバーの右側に配置
-                NavigationLink(destination:TableEditView()){ //↓のアイコンにナビゲーションリンクを設定
-                    Image(systemName: "rectangle.and.pencil.and.ellipsis")   //アイコンの設定
-                }
-            }
             
             
-        }
-            
-            
-        }//ナビゲーションビュー終了
+            } //ナビゲーションビュー終了
         
     }//body終了
 }//TabCView終了

@@ -21,15 +21,15 @@ struct TabAView: View {
             ZStack{ // 背景色指定
                 Color(red: 0.88, green: 0.96, blue:1.0).edgesIgnoringSafeArea(.all)
             VStack{
-                VStack(alignment: .leading) {//テキストとその下の要素を縦に並べる
+                VStack(alignment: .leading) { //テキストとその下の要素を縦に並べる
                     Text("ToDoList")
                         .font(.system(size: 40, weight: .black, design: .rounded))
                         .padding(15)
                         .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
                    
                     
-                    HStack {//入力フィールドとDoneボタンを横に並べる
-                        TextField("ToDoを入力", text: $NewAlist) //入力タスクをフィールドに
+                    HStack {    //入力フィールドとDoneボタンを横に並べる
+                        TextField("ToDoを入力", text: $NewAlist)   //入力タスクをフィールドに
                             .textFieldStyle(RoundedBorderTextFieldStyle()) //入力フィールドを線で囲む
                         
                         
@@ -40,7 +40,7 @@ struct TabAView: View {
                             
                             UIImpactFeedbackGenerator(style: .medium)
                             .impactOccurred()
-                           self.NewAlist = ""//入力フィールドを空に
+                           self.NewAlist = ""   //入力フィールドを空に
                            self.i += 1
                             
                         }) {
@@ -51,7 +51,7 @@ struct TabAView: View {
                               
                             
                         }.disabled(NewAlist.isEmpty)  //文字が入力されてない時は押せない
-                   }//入力フィールドとDoneボタンの横並び終了
+                   }    //入力フィールドとDoneボタンの横並び終了
                     
                     
                }.padding([.leading, .trailing])
@@ -87,7 +87,7 @@ struct TabAView: View {
                     }
                      
                    
-                }.onDelete(perform: self.deleteRow) // 削除処理1呼び出し
+                }.onDelete(perform: self.deleteRow)     // 削除処理1呼び出し
                 
                 .listRowBackground(Color.init(red: 1.0, green: 1.0, blue: 1.0))
                 
@@ -124,7 +124,7 @@ struct TabAView: View {
             }
             
             
-       }//bodyの終了
+       }    //bodyの終了
     
     
     
@@ -153,11 +153,14 @@ struct TabAView: View {
         }
     
         
-    }//TabAView終了
+    }   //TabAView終了
 
-struct TabAView_Previews: PreviewProvider {//TabAViewのシミュレーター
+//TabAViewのシミュレーター
+struct TabAView_Previews: PreviewProvider {
     static var previews: some View {
         TabAView()
             .environmentObject(SjAndCn())
     }
-}//TabAViewのシミュレーター終了
+}
+//何でプレビューできへんねーん
+//TabAViewのシミュレーター終了

@@ -51,10 +51,21 @@ struct TableEditSheet: View {
             
             
             VStack{
-                        
+                
+            
+                
+            Image(systemName: "chevron.down")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 30, height: 30)
+                .foregroundColor(.gray)
+                .padding(30)
+                
+            
+            
             Text(Youbi[TimeTable.Table/5]+"曜日"+"\(TimeTable.Table%5+1)限")
                 .font(.system(size: 50, weight: .black, design: .rounded))
-                .padding(20)
+                .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
             
         
             Form { //フォームの開始

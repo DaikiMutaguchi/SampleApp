@@ -67,9 +67,9 @@ struct TabAView: View {
                 ForEach(Alist.filter { !$0.isEmpty }, id: \.self){ user in
                     
                     HStack{
-                        Button(action: toggle) {
+                        Button(action:toggle){
                                     if(isChecked) {
-                                       
+                                      
                                         Image(systemName: "checkmark.square.fill")
                                             .foregroundColor(.green)
                                     

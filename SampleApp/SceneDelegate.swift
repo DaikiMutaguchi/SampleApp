@@ -11,7 +11,8 @@ import SwiftUI
 func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     // Create the SwiftUI view that provides the window contents.
     let contentView = ContentView()
-        .environmentObject(SjAndCn()) // グローバル変数の設定している
+        .environmentObject(SjAndCn())
+        .environmentObject(Obakeinfo())// グローバル変数の設定している
  
     // Use a UIHostingController as window root view controller.
     if let windowScene = scene as? UIWindowScene {

@@ -11,17 +11,9 @@ import SwiftUI
 struct SheetView: View {
     
     
-    let ObakeName = ["ダミー", "おさるオバケ", "水曜日", "木曜日",
-                     "金曜日" , "たぬきおばけ"]
-    
-    let rea = ["ダミー",
-        "レア度：☆☆☆☆★","レア度：☆☆☆☆★","レア度：☆☆☆☆★","レア度：☆☆☆☆★","レア度：☆☆☆☆★",
-               "レア度：☆☆☆★★","レア度：☆☆☆★★","レア度：☆☆☆★★","レア度：☆☆☆★★","レア度：☆☆☆★★",
-               "レア度：☆☆★★★","レア度：☆☆★★★","レア度：☆☆★★★","レア度：☆☆★★★","レア度：☆☆★★★","レア度：☆★★★★","レア度：☆★★★★","レア度：☆★★★★","レア度：★★★★★","レア度：★★★★★",]
-    
-    let description = ["ダミー","どこにでも現れる普遍的なおばけ。\n勉強して頑張ってる人を見つけてふよふお応援するよ",
-    "さかさまになったおばけ"]
-    
+    @EnvironmentObject var ObakeName: Obakeinfo
+    @EnvironmentObject var description: Obakeinfo
+    @EnvironmentObject var rea: Obakeinfo
     
 
     @Binding var isShowingSheet : Bool
@@ -47,7 +39,7 @@ struct SheetView: View {
         Text("No.\(self.ObakePoint.Obake)")
             .offset(x: 15, y: 0)
             .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
-            
+            .font(.system(size: 20, weight: .semibold))
        
         Image("Obake\(self.ObakePoint.Obake)")
             .resizable()
@@ -58,16 +50,16 @@ struct SheetView: View {
             
             
             
-        Text(ObakeName[self.ObakePoint.Obake])
+            Text(ObakeName.ObakeName[self.ObakePoint.Obake])
             .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
             .font(.system(size: 20, weight: .semibold))
             
-        Text(description[self.ObakePoint.Obake])
+            Text(description.description[self.ObakePoint.Obake])
             .padding(30)
         
        
             
-        Text(rea[self.ObakePoint.Obake])
+            Text(rea.rea[self.ObakePoint.Obake])
             .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
             .font(.system(size: 20, weight: .semibold))
             .offset(x: -80, y: 0)

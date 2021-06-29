@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E0DE84F260B1A1F009A61DF /* ListEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DE84E260B1A1F009A61DF /* ListEntryView.swift */; };
 		1E2CD4692647A138003650C1 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CD4682647A138003650C1 /* CheckBox.swift */; };
+		52BD188F268B7F1100CFFD75 /* Obakeinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD188E268B7F1100CFFD75 /* Obakeinfo.swift */; };
 		52E76F8E2589BCD7000B24C0 /* SampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76F8D2589BCD7000B24C0 /* SampleAppApp.swift */; };
 		52E76F902589BCD7000B24C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76F8F2589BCD7000B24C0 /* ContentView.swift */; };
 		52E76F922589BCD8000B24C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E76F912589BCD8000B24C0 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		1E0DE84E260B1A1F009A61DF /* ListEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntryView.swift; sourceTree = "<group>"; };
 		1E2CD4682647A138003650C1 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		52BD188E268B7F1100CFFD75 /* Obakeinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obakeinfo.swift; sourceTree = "<group>"; };
 		52E76F8A2589BCD7000B24C0 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E76F8D2589BCD7000B24C0 /* SampleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppApp.swift; sourceTree = "<group>"; };
 		52E76F8F2589BCD7000B24C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				52E76F9D2589BDFD000B24C0 /* TabAView.swift */,
 				52E76FA02589BE1D000B24C0 /* TabBView.swift */,
 				D2149B762681973D0055805F /* SheetView.swift */,
+				52BD188E268B7F1100CFFD75 /* Obakeinfo.swift */,
 				D257699C2683A08F00386952 /* TableEditSheet.swift */,
 				52E76FA72589C431000B24C0 /* TabCView.swift */,
 				D26DD2D925E90586002D9D2A /* TableEditView.swift */,
@@ -181,6 +184,7 @@
 				52E76FA12589BE1D000B24C0 /* TabBView.swift in Sources */,
 				52E76F9E2589BDFD000B24C0 /* TabAView.swift in Sources */,
 				D26DD2DA25E90586002D9D2A /* TableEditView.swift in Sources */,
+				52BD188F268B7F1100CFFD75 /* Obakeinfo.swift in Sources */,
 				52E76F902589BCD7000B24C0 /* ContentView.swift in Sources */,
 				D2149B772681973D0055805F /* SheetView.swift in Sources */,
 				52E76F8E2589BCD7000B24C0 /* SampleAppApp.swift in Sources */,

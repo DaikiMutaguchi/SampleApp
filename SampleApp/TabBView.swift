@@ -25,7 +25,6 @@ struct TabBView: View {
             
            
             VStack{
-                    
              
                 if self.TaskPoint.Point >= 0{
                     Image("IMG_0461")
@@ -34,30 +33,44 @@ struct TabBView: View {
                 }
                 
                 
-                HStack(spacing: 5) {
-            if self.TaskPoint.Point >= 1{
-                
-                
-                
-                Button(action:{
-                    self.ObakePoint.Obake = 1
-                    self.isShowingSheet = true
+        HStack(spacing: 5) {
                     
-                })
-                {
-                    Image("IMG_0460")
-                        .resizable()
-                        .frame(width: 200, height: 200)
-
+            ZStack{
+                        
+                Button(action:{
+                    self.ObakePoint.Obake = 0
+                    self.isShowingSheet = true
+                        })
+                        {
+                            Image("IMG_0460m")
+                                .resizable()
+                                .frame(width: 200, height: 200)
+                        
                 }
-                .sheet(isPresented: $isShowingSheet)
-                {
-                    SheetView(isShowingSheet: self.$isShowingSheet)
-                }
-                
-                
-                
-            }
+                        .sheet(isPresented: $isShowingSheet)
+                            {
+                                SheetView(isShowingSheet: self.$isShowingSheet)
+                            }
+            
+                if self.TaskPoint.Point >= 1{
+                    Button(action:{
+                        self.ObakePoint.Obake = 1
+                        self.isShowingSheet = true
+                            })
+                        {
+                            Image("IMG_0460")
+                                .resizable()
+                                .frame(width: 200, height: 200)
+                        }
+                            .sheet(isPresented: $isShowingSheet)
+               
+                    
+                            {
+                                SheetView(isShowingSheet: self.$isShowingSheet)
+                            }
+                        }//カラー画像
+                        
+                    }//ZStack
                     
                     
                     

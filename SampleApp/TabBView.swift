@@ -64,10 +64,9 @@ struct TabBView: View {
                         }
                             .sheet(isPresented: $isShowingSheet)
                
-                    
-                            {
-                                SheetView(isShowingSheet: self.$isShowingSheet)
-                            }
+                        {
+                            SheetView(isShowingSheet: self.$isShowingSheet)
+                        }
                         }//カラー画像
                         
                     }//ZStack

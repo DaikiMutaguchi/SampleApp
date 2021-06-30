@@ -10,7 +10,7 @@ import SwiftUI
  
 class Obakeinfo : ObservableObject {      //グローバル変数を格納しているクラスの作成
     
-    @Published var ObakeName = ["ToDoを実行しておばけを集めよう！", "おさるオバケ", "水曜日", "木曜日",
+    @Published var ObakeName = ["ToDoを実行しておばけを集めよう！", "おさるオバケ", "さかさおばけ", "木曜日",
                      "金曜日" , "たぬきおばけ"]
     
     @Published var rea = ["レア度：？？？？？",

@@ -74,23 +74,42 @@ struct TabBView: View {
                     
                     
                     
-            if self.TaskPoint.Point >= 2{
+            ZStack{
+                        
                 Button(action:{
-                    self.ObakePoint.Obake = 2
+                    self.ObakePoint.Obake = 0
                     self.isShowingSheet = true
+                        })
+                        {
+                            Image("Obake2m")
+                                .resizable()
+                                .frame(width: 200, height: 200)
+                        
+                }
+                        .sheet(isPresented: $isShowingSheet)
+                            {
+                                SheetView(isShowingSheet: self.$isShowingSheet)
+                            }
+            
+                if self.TaskPoint.Point >= 2{
+                    Button(action:{
+                        self.ObakePoint.Obake = 2
+                        self.isShowingSheet = true
+                            })
+                        {
+                            Image("Obake2")
+                                .resizable()
+                                .frame(width: 200, height: 200)
+                        }
+                            .sheet(isPresented: $isShowingSheet)
+               
                     
-                })
-                {
-                    Image("IMG_0460")
-                        .resizable()
-                        .frame(width: 200, height: 200)
-
-                }
-                .sheet(isPresented: $isShowingSheet)
-                {
-                    SheetView(isShowingSheet: self.$isShowingSheet)
-                }
-            }
+                            {
+                                SheetView(isShowingSheet: self.$isShowingSheet)
+                            }
+                        }//カラー画像
+                        
+                    }//ZStack
                 
             }//HStack終了
                 

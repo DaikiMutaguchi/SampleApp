@@ -30,8 +30,12 @@ struct TabBView: View {
                     Image("IMG_0461")
                         .resizable()
                         .frame(width: 400, height: 200)
-                }
                 
+       
+                
+                
+                
+    ForEach((1...10), id: \.self) { LP in
                 
         HStack(spacing: 5) {
                     
@@ -42,24 +46,26 @@ struct TabBView: View {
                     self.isShowingSheet = true
                         })
                         {
-                            Image("Obake1m")
+                            Image("Obake\((LP * 2)-1)m")
                                 .resizable()
                                 .frame(width: 200, height: 200)
+                                .border(Color.red)
                 }
                         .sheet(isPresented: $isShowingSheet)
                             {
                                 SheetView(isShowingSheet: self.$isShowingSheet)
                             } // モノクロ設定終了
             
-                if self.TaskPoint.Point >= 1{ //カラー画像
+                if self.TaskPoint.Point >= (LP * 2)-1{ //カラー画像
                         Button(action:{
-                            self.ObakePoint.Obake = 1
+                            self.ObakePoint.Obake = (LP * 2)-1
                             self.isShowingSheet = true
                                 })
                             {
-                                Image("Obake1")
+                                Image("Obake\((LP * 2)-1)")
                                     .resizable()
                                     .frame(width: 200, height: 200)
+                                    .border(Color.red)
                             }
                                     .sheet(isPresented: $isShowingSheet)
                
@@ -78,24 +84,26 @@ struct TabBView: View {
                     self.isShowingSheet = true
                         })
                         {
-                            Image("Obake2m")
+                            Image("Obake\(LP * 2)m")
                                 .resizable()
                                 .frame(width: 200, height: 200)
+                                .border(Color.red)
                 }
                         .sheet(isPresented: $isShowingSheet)
                             {
                                 SheetView(isShowingSheet: self.$isShowingSheet)
                             } // モノクロ設定終了
             
-                if self.TaskPoint.Point >= 2{ //カラー画像
+                if self.TaskPoint.Point >= LP * 2{ //カラー画像
                         Button(action:{
-                            self.ObakePoint.Obake = 2
+                            self.ObakePoint.Obake = LP * 2
                             self.isShowingSheet = true
                                 })
                             {
-                                Image("Obake2")
+                                Image("Obake\(LP * 2)")
                                     .resizable()
                                     .frame(width: 200, height: 200)
+                                    .border(Color.red)
                             }
                                     .sheet(isPresented: $isShowingSheet)
                
@@ -107,82 +115,27 @@ struct TabBView: View {
                     }//おばけ終了
                 
             }//HStack終了
+        
+    }//ループ終了
+                    
+                    
+                    
+        HStack {          // ポイントカウント
+            Text("\(TaskPoint.Point)")
+            Text("ポイント獲得")
+            
+            if self.TaskPoint.Point >= 20 {
+                
+            Button(action:{self.TaskPoint.Point = 0}){
+                Text("コンプリートおめでとう！\nリセットして最初から遊ぼう")
+            }
+            }
+        }
+        
+    }//VStack
                 
                 
-                HStack(spacing: 5) {
-                            
-                    ZStack{ //おばけ開始
-                                
-                        Button(action:{ //モノクロのおばけ画像ボタン
-                            self.ObakePoint.Obake = 0
-                            self.isShowingSheet = true
-                                })
-                                {
-                                    Image("Obake3m")
-                                        .resizable()
-                                        .frame(width: 200, height: 200)
-                        }
-                                .sheet(isPresented: $isShowingSheet)
-                                    {
-                                        SheetView(isShowingSheet: self.$isShowingSheet)
-                                    } // モノクロ設定終了
-                    
-                        if self.TaskPoint.Point >= 3{ //カラー画像
-                                Button(action:{
-                                    self.ObakePoint.Obake = 3
-                                    self.isShowingSheet = true
-                                        })
-                                    {
-                                        Image("Obake3")
-                                            .resizable()
-                                            .frame(width: 200, height: 200)
-                                    }
-                                            .sheet(isPresented: $isShowingSheet)
-                       
-                                    {
-                                        SheetView(isShowingSheet: self.$isShowingSheet)
-                                    }
-                                }//カラー画像終了
-                                
-                            }//おばけ終了
-                            
-                    
-                    ZStack{ //おばけ開始
-                                
-                        Button(action:{ //モノクロのおばけ画像ボタン
-                            self.ObakePoint.Obake = 0
-                            self.isShowingSheet = true
-                                })
-                                {
-                                    Image("Obake4m")
-                                        .resizable()
-                                        .frame(width: 200, height: 200)
-                        }
-                                .sheet(isPresented: $isShowingSheet)
-                                    {
-                                        SheetView(isShowingSheet: self.$isShowingSheet)
-                                    } // モノクロ設定終了
-                    
-                        if self.TaskPoint.Point >= 4{ //カラー画像
-                                Button(action:{
-                                    self.ObakePoint.Obake = 4
-                                    self.isShowingSheet = true
-                                        })
-                                    {
-                                        Image("Obake4")
-                                            .resizable()
-                                            .frame(width: 200, height: 200)
-                                    }
-                                            .sheet(isPresented: $isShowingSheet)
-                       
-                                    {
-                                        SheetView(isShowingSheet: self.$isShowingSheet)
-                                    }
-                                }//カラー画像終了
-                                
-                            }//おばけ終了
-                        
-                    }//HStack終了
+    //ループ終了
         
             
         

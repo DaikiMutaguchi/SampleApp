@@ -10,6 +10,8 @@ import SwiftUI
  
 class Obakeinfo : ObservableObject {      //グローバル変数を格納しているクラスの作成
     
+    @Published var  GetPoint: [Int] = [0,1,2,3,4,5,6,7,8,9]
+  
     
     //おばけの名前の定義
     @Published var ObakeName = ["ToDoを実行しておばけを集めよう！",

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TabBView: View {
-    let GetPoint = [1,3,5,10,15,20,25,30,40,50,60,70,80,90,100,150,200,300,400,500,]
     
+    @EnvironmentObject var CP: Obakeinfo
     @EnvironmentObject var TaskPoint: SjAndCn //タスク完了で得られるポイント
     @State private var isShowingSheet: Bool = false
     @EnvironmentObject var ObakePoint: SjAndCn
@@ -49,14 +49,16 @@ struct TabBView: View {
                             Image("Obake\((LP * 2)-1)m")
                                 .resizable()
                                 .frame(width: 200, height: 200)
-                                .border(Color.red)
+                                .cornerRadius(30)
+                              
+                          //      .border(Color.red)
                 }
                         .sheet(isPresented: $isShowingSheet)
                             {
                                 SheetView(isShowingSheet: self.$isShowingSheet)
                             } // モノクロ設定終了
             
-                if self.TaskPoint.Point >= (LP * 2)-1{ //カラー画像
+                if self.TaskPoint.Point >= ((LP * 2)-1) * 5{ //カラー画像
                         Button(action:{
                             self.ObakePoint.Obake = (LP * 2)-1
                             self.isShowingSheet = true
@@ -65,7 +67,9 @@ struct TabBView: View {
                                 Image("Obake\((LP * 2)-1)")
                                     .resizable()
                                     .frame(width: 200, height: 200)
-                                    .border(Color.red)
+                                    .cornerRadius(30)
+                                   
+                               //     .border(Color.red)
                             }
                                     .sheet(isPresented: $isShowingSheet)
                
@@ -87,14 +91,15 @@ struct TabBView: View {
                             Image("Obake\(LP * 2)m")
                                 .resizable()
                                 .frame(width: 200, height: 200)
-                                .border(Color.red)
+                                .cornerRadius(30)
+                            //  .border(Color.red)
                 }
                         .sheet(isPresented: $isShowingSheet)
                             {
                                 SheetView(isShowingSheet: self.$isShowingSheet)
                             } // モノクロ設定終了
             
-                if self.TaskPoint.Point >= LP * 2{ //カラー画像
+                if self.TaskPoint.Point >= LP * 2 * 5{ //カラー画像
                         Button(action:{
                             self.ObakePoint.Obake = LP * 2
                             self.isShowingSheet = true
@@ -103,7 +108,8 @@ struct TabBView: View {
                                 Image("Obake\(LP * 2)")
                                     .resizable()
                                     .frame(width: 200, height: 200)
-                                    .border(Color.red)
+                                    .cornerRadius(30)
+                            //     .border(Color.red)
                             }
                                     .sheet(isPresented: $isShowingSheet)
                

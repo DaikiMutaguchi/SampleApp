@@ -48,6 +48,7 @@ struct SheetView: View {
             
         }
             
+         
             
             
             Text(ObakeName.ObakeName[self.ObakePoint.Obake])

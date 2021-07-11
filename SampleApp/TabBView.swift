@@ -48,7 +48,7 @@ struct TabBView: View {
                         {
                             Image("Obake\((LP * 2)-1)m")
                                 .resizable()
-                                .frame(width: 200, height: 200)
+                                .frame(width: 180, height: 180)
                                 .cornerRadius(30)
                               
                           //      .border(Color.red)
@@ -66,7 +66,7 @@ struct TabBView: View {
                             {
                                 Image("Obake\((LP * 2)-1)")
                                     .resizable()
-                                    .frame(width: 200, height: 200)
+                                    .frame(width: 180, height: 180)
                                     .cornerRadius(30)
                                    
                                //     .border(Color.red)
@@ -90,7 +90,7 @@ struct TabBView: View {
                         {
                             Image("Obake\(LP * 2)m")
                                 .resizable()
-                                .frame(width: 200, height: 200)
+                                .frame(width: 180, height: 180)
                                 .cornerRadius(30)
                             //  .border(Color.red)
                 }
@@ -107,7 +107,7 @@ struct TabBView: View {
                             {
                                 Image("Obake\(LP * 2)")
                                     .resizable()
-                                    .frame(width: 200, height: 200)
+                                    .frame(width: 180, height: 180)
                                     .cornerRadius(30)
                             //     .border(Color.red)
                             }

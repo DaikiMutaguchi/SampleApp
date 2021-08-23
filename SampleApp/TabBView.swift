@@ -130,12 +130,8 @@ struct TabBView: View {
             Text("\(TaskPoint.Point)")
             Text("ポイント獲得")
             
-            if self.TaskPoint.Point >= 20 {
-                
-            Button(action:{self.TaskPoint.Point = 0}){
-                Text("コンプリートおめでとう！\nリセットして最初から遊ぼう")
-            }
-            }
+           
+            
         }
         
     }//VStack

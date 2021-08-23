@@ -13,6 +13,7 @@ struct ContentView: View {
         TabView {    //タブビューの宣言
             
             
+            
             TabAView()              //TabAView.swiftの呼び出し
                 
                 .tabItem {  //タブバーに関する設定

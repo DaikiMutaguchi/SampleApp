@@ -27,9 +27,10 @@ struct TabBView: View {
             VStack{
              
                 if self.TaskPoint.Point >= 0{ //タイトル画像
-                    Image("IMG_0461")
+                    Image("Obakehead")
                         .resizable()
-                        .frame(width: 400, height: 200)
+                        .padding(.top,10)
+                        .frame(width: 390, height:200)
                 
        
                 

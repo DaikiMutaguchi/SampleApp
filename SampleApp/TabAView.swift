@@ -110,14 +110,16 @@ struct TabAView: View {
                 Image("Listicon")
                     .offset(x: 130, y: 0)
                 
-                HStack {          // ポイントカウント
-                    Text("\(TaskPoint.Point)")
-                    Text("ポイント獲得")
-                    Button(action:{self.TaskPoint.Point = 0}){
-                        Text("リセット")
-                    }
-                }
-       
+                
+                
+                              //  HStack {          // ポイントカウント
+                              //             Text("\(TaskPoint.Point)")
+                              //             Text("ポイント獲得")
+                              //              Button(action:{self.TaskPoint.Point = 0}){
+                              //             Text("リセット")
+                              //              }
+                              //          }
+                                
             }
             
            

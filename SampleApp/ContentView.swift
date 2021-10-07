@@ -66,5 +66,3 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-
-//ぷるがちゃんとできるか確かめたい

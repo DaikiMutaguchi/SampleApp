@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E0DE84F260B1A1F009A61DF /* ListEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DE84E260B1A1F009A61DF /* ListEntryView.swift */; };
 		1E2CD4692647A138003650C1 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CD4682647A138003650C1 /* CheckBox.swift */; };
 		52BD188F268B7F1100CFFD75 /* Obakeinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD188E268B7F1100CFFD75 /* Obakeinfo.swift */; };
 		52E76F8E2589BCD7000B24C0 /* SampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76F8D2589BCD7000B24C0 /* SampleAppApp.swift */; };
@@ -19,14 +18,11 @@
 		52E76FA82589C431000B24C0 /* TabCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76FA72589C431000B24C0 /* TabCView.swift */; };
 		D2149B772681973D0055805F /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2149B762681973D0055805F /* SheetView.swift */; };
 		D257699D2683A08F00386952 /* TableEditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D257699C2683A08F00386952 /* TableEditSheet.swift */; };
-		D26DD2DA25E90586002D9D2A /* TableEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26DD2D925E90586002D9D2A /* TableEditView.swift */; };
-		D28860E325EA767200ED7D00 /* SubMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28860E225EA767200ED7D00 /* SubMemoView.swift */; };
 		D2956AB125E9631B0007E833 /* SjAndCn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2956AB025E9631B0007E833 /* SjAndCn.swift */; };
 		D2956AB425E965360007E833 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2956AB325E965360007E833 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E0DE84E260B1A1F009A61DF /* ListEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntryView.swift; sourceTree = "<group>"; };
 		1E2CD4682647A138003650C1 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		52BD188E268B7F1100CFFD75 /* Obakeinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obakeinfo.swift; sourceTree = "<group>"; };
 		52E76F8A2589BCD7000B24C0 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,8 +36,6 @@
 		52E76FA72589C431000B24C0 /* TabCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCView.swift; sourceTree = "<group>"; };
 		D2149B762681973D0055805F /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		D257699C2683A08F00386952 /* TableEditSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableEditSheet.swift; sourceTree = "<group>"; };
-		D26DD2D925E90586002D9D2A /* TableEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableEditView.swift; sourceTree = "<group>"; };
-		D28860E225EA767200ED7D00 /* SubMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMemoView.swift; sourceTree = "<group>"; };
 		D2956AB025E9631B0007E833 /* SjAndCn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SjAndCn.swift; sourceTree = "<group>"; };
 		D2956AB325E965360007E833 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,10 +79,7 @@
 				52BD188E268B7F1100CFFD75 /* Obakeinfo.swift */,
 				D257699C2683A08F00386952 /* TableEditSheet.swift */,
 				52E76FA72589C431000B24C0 /* TabCView.swift */,
-				D26DD2D925E90586002D9D2A /* TableEditView.swift */,
-				D28860E225EA767200ED7D00 /* SubMemoView.swift */,
 				D2956AB025E9631B0007E833 /* SjAndCn.swift */,
-				1E0DE84E260B1A1F009A61DF /* ListEntryView.swift */,
 				52E76F912589BCD8000B24C0 /* Assets.xcassets */,
 				52E76F962589BCD8000B24C0 /* Info.plist */,
 				52E76F932589BCD8000B24C0 /* Preview Content */,
@@ -175,15 +166,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E76FA82589C431000B24C0 /* TabCView.swift in Sources */,
-				1E0DE84F260B1A1F009A61DF /* ListEntryView.swift in Sources */,
 				D2956AB125E9631B0007E833 /* SjAndCn.swift in Sources */,
 				1E2CD4692647A138003650C1 /* CheckBox.swift in Sources */,
 				D257699D2683A08F00386952 /* TableEditSheet.swift in Sources */,
 				D2956AB425E965360007E833 /* SceneDelegate.swift in Sources */,
-				D28860E325EA767200ED7D00 /* SubMemoView.swift in Sources */,
 				52E76FA12589BE1D000B24C0 /* TabBView.swift in Sources */,
 				52E76F9E2589BDFD000B24C0 /* TabAView.swift in Sources */,
-				D26DD2DA25E90586002D9D2A /* TableEditView.swift in Sources */,
 				52BD188F268B7F1100CFFD75 /* Obakeinfo.swift in Sources */,
 				52E76F902589BCD7000B24C0 /* ContentView.swift in Sources */,
 				D2149B772681973D0055805F /* SheetView.swift in Sources */,

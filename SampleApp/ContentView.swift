@@ -66,4 +66,4 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-//フェッチ
+//フェッチできてる

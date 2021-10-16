@@ -199,31 +199,24 @@ struct TableEditSheet: View {
             }//form
         
                 
-        VStack{
-            if self.subeditting == true || self.cleditting == true{
-                Text("確定を押して下さい")
-            }
-            
-         Button(action:{
-            self.isShowingEditSheet = false
-                }){
-                Text("閉じる")
+            VStack{
+                if self.subeditting == true || self.cleditting == true{
+                    Text("確定を押して下さい")
                 }
-         .disabled(self.subeditting == true)
-         .disabled(self.cleditting == true)
+            
+                Button(action:{
+                    self.isShowingEditSheet = false
+                    }){
+                    Text("閉じる")
+                    }
+                    .disabled(self.subeditting == true||self.cleditting == true )
+                   
                 
-        }
+            }//VStack
             
             
-                
-                
                 
         }//VStack
         }//ZStack
-
     }//body
-        
-     
-        
-    
-}
+}//View

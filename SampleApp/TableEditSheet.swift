@@ -10,7 +10,6 @@ import SwiftUI
 struct TableEditSheet: View {
     let Youbi = ["月","火","水","木","金"] //タイトル部分の科目名
     
-    
     @EnvironmentObject var ESubTitle: SjAndCn    //クラスSjAndCnから、変数ESubJectを設定
     @EnvironmentObject var EClassNo: SjAndCn    //クラスSjAndCnから、変数EClassNoを設定
     @EnvironmentObject var EMemo: SjAndCn    //クラスSjAndCnから、変数ESubJectを設定
@@ -24,20 +23,15 @@ struct TableEditSheet: View {
     @State var Memoname : String = ""
     @State var Memoeditting = false      //科目名のテキストフィールドを編集しているかどうか
     
-    
-   
     @EnvironmentObject var Flag: SjAndCn
     @State private var Delete : String = ""
     
     @Binding var isShowingEditSheet : Bool
     @EnvironmentObject var ObakePoint: SjAndCn
-    
     @EnvironmentObject var TimeTable: SjAndCn
-    
     
     @EnvironmentObject var SubMemo: SjAndCn //クラスSjAndCnから変数を作成
     @EnvironmentObject var MAb: SjAndCn //クラスSjAndCnから変数を作成
-    
     
     
     
@@ -45,29 +39,25 @@ struct TableEditSheet: View {
         self.EMemo.Memo[TimeTable.Table] = ""
     }
     
+    
+    
     var body: some View {
         ZStack{ // 背景色指定
             Color(red: 0.88, green: 0.96, blue:1.0).edgesIgnoringSafeArea(.all)
             
-            
             VStack{
+    
+                Image(systemName: "chevron.down")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.gray)
+                    .padding(30)
                 
-            
-                
-            Image(systemName: "chevron.down")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 30, height: 30)
-                .foregroundColor(.gray)
-                .padding(30)
-                
-            
-            
             Text(Youbi[TimeTable.Table/5]+"曜日"+"\(TimeTable.Table%5+1)限")
                 .font(.system(size: 50, weight: .black, design: .rounded))
                 .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
             
-        
             Form { //フォームの開始
                 
                 HStack{    //科目名表示
@@ -77,10 +67,7 @@ struct TableEditSheet: View {
                         .font(.system(.headline, design: .rounded))    //文字の太さ：ヘッドライン、書体：ゴシック体
                 }    //科目名表示終了
                 
-                
-                
                 TextField("科目名を入力して下さい", text: $subname, //科目名テキストフィールド
-                              
                         onEditingChanged: { begin in//編集中に関する処理開始
                             if begin {    //入力処理中ならばifを実行
                                 self.subeditting = true    // 編集フラグをオン
@@ -94,14 +81,10 @@ struct TableEditSheet: View {
                             }
                         }//編集中に関する処理終了
                         
-                )//テキストフィールド終了
-                //テキストフィールドに関する設定
-                .textFieldStyle(RoundedBorderTextFieldStyle())     // 入力域を枠で囲む
-                .shadow(color: subeditting ? .blue : .clear, radius: 3)     // 編集フラグがONの時に枠に影を付ける
-                //設定終了
-                    
-        
-                
+                )   .textFieldStyle(RoundedBorderTextFieldStyle())     // 入力域を枠で囲む
+                    .shadow(color: subeditting ? .blue : .clear, radius: 3)     // 編集フラグがONの時に枠に影を付ける
+              
+                                    
                 HStack{    //教室名表示
                     Text("教室")
                     Spacer()
@@ -109,7 +92,6 @@ struct TableEditSheet: View {
                         .font(.system(.headline, design: .rounded))
                     
                 }    //教室名表示終了
-                
                 
                 TextField("教室を入力して下さい", text: $clname,
                               
@@ -125,24 +107,23 @@ struct TableEditSheet: View {
                                 self.clname = ""
                             }
                         }
-                )//テキストフィールド終了
-                //テキストフィールドに関する設定
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .shadow(color: cleditting ? .blue : .clear, radius: 3)
-                //設定終了
+                ) .textFieldStyle(RoundedBorderTextFieldStyle())
+                  .shadow(color: cleditting ? .blue : .clear, radius: 3)
+             
                 
                 
                 Toggle(isOn:$Flag.Flag[TimeTable.Table]) {
-                                Text("授業メモの追加／編集")
+                    Text("授業メモの追加／編集")
                                 
                 }
+              
                 if Flag.Flag[TimeTable.Table] {
                 
-                Text(EMemo.Memo[TimeTable.Table])
-                    .font(.system(.headline, design: .rounded))
-                    
-                TextField("メモを入力して下さい", text: $Memoname,
+                    Text(EMemo.Memo[TimeTable.Table])
+                        .font(.system(.headline, design: .rounded))
+                    TextField("メモを入力して下さい", text: $Memoname,
                               
+                    
                         onEditingChanged: { begin in
                             
                             if begin {
@@ -155,19 +136,15 @@ struct TableEditSheet: View {
                                 self.Memoname = ""
                             }
                         }
-                )//テキストフィールド終了
-                //テキストフィールドに関する設定
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .shadow(color: Memoeditting ? .blue : .clear, radius: 3)
-               .disabled(!Flag.Flag[TimeTable.Table])
-                //設定終了
-                
+                    ) .textFieldStyle(RoundedBorderTextFieldStyle())
+                      .shadow(color: Memoeditting ? .blue : .clear, radius: 3)
+                      .disabled(!Flag.Flag[TimeTable.Table])
+     
                 
                 }
                 
                 
                 HStack{
-                //
                
                     if self.MAb.Absence[TimeTable.Table] >= 5{
                         Text("欠席回数：\(MAb.Absence[TimeTable.Table])")
@@ -192,11 +169,12 @@ struct TableEditSheet: View {
                     .scaledToFit()
                     .frame(width: 30, height: 30)
                     .foregroundColor(.blue)
+                    
                     .onTapGesture {
-                        
+            
                         self.MAb.Absence[TimeTable.Table] += 1
                         UIImpactFeedbackGenerator(style: .medium)
-                        .impactOccurred()
+                            .impactOccurred()
                                     }
                     .disabled(MAb.Absence[TimeTable.Table]>=15)
                 
@@ -205,6 +183,7 @@ struct TableEditSheet: View {
                     .scaledToFit()
                     .frame(width: 30, height: 30)
                     .foregroundColor(.blue)
+                    
                     .onTapGesture {
                         self.MAb.Absence[TimeTable.Table] -= 1
                         UIImpactFeedbackGenerator(style: .medium)
@@ -217,24 +196,30 @@ struct TableEditSheet: View {
                     
                 }
                 
-                  
-                
-                
-        
-        
             }//form
         
-        
-        
-        
-        Button(action:{
-                self.isShowingEditSheet = false
-          
-               })  {
-            Text("閉じる")
+                
+        VStack{
+            if self.subeditting == true || self.cleditting == true{
+                Text("確定を押して下さい")
+            }
+            
+         Button(action:{
+            self.isShowingEditSheet = false
+                }){
+                Text("閉じる")
+                }
+         .disabled(self.subeditting == true)
+         .disabled(self.cleditting == true)
+                
         }
-        }
-        }
+            
+            
+                
+                
+                
+        }//VStack
+        }//ZStack
 
     }//body
         

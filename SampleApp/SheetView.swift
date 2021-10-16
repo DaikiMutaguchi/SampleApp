@@ -62,9 +62,6 @@ struct SheetView: View {
                     })  {
                         Text("図鑑に戻る")
                         }
-            
-            
-            
         }//VStack
         
     }//body

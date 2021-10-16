@@ -15,32 +15,25 @@ struct TabBView: View {
     @EnvironmentObject var ObakePoint: SjAndCn
     
     
-    var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
+var body: some View {
+    ScrollView(.vertical, showsIndicators: false) {
             
         ZStack(alignment: .top){
             Image("TbBG")
                 .resizable()
                 .frame(width: 400, height: 800)
             
-           
             VStack{
-             
                 if self.TaskPoint.Point >= 0{ //タイトル画像
                     Image("Obakehead")
                         .resizable()
                         .padding(.top,10)
                         .frame(width: 390, height:200)
                 
-       
+        ForEach((1...10), id: \.self) { LP in
                 
-                
-                
-    ForEach((1...10), id: \.self) { LP in
-                
-        HStack(spacing: 5) {
-                    
-            ZStack{ //おばけ開始
+            HStack(spacing: 5) {
+                ZStack{ //おばけ１開始
                         
                 Button(action:{ //モノクロのおばけ画像ボタン
                     self.ObakePoint.Obake = 0
@@ -51,13 +44,11 @@ struct TabBView: View {
                                 .resizable()
                                 .frame(width: 180, height: 180)
                                 .cornerRadius(30)
-                              
-                          //      .border(Color.red)
-                }
-                        .sheet(isPresented: $isShowingSheet)
-                            {
-                                SheetView(isShowingSheet: self.$isShowingSheet)
-                            } // モノクロ設定終了
+                        }
+                            .sheet(isPresented: $isShowingSheet)
+                                {
+                                    SheetView(isShowingSheet: self.$isShowingSheet)
+                                } // モノクロ設定終了
             
                 if self.TaskPoint.Point >= ((LP * 2)-1) * 5{ //カラー画像
                         Button(action:{
@@ -70,9 +61,8 @@ struct TabBView: View {
                                     .frame(width: 180, height: 180)
                                     .cornerRadius(30)
                                    
-                               //     .border(Color.red)
                             }
-                                    .sheet(isPresented: $isShowingSheet)
+                            .sheet(isPresented: $isShowingSheet)
                
                             {
                                 SheetView(isShowingSheet: self.$isShowingSheet)
@@ -82,7 +72,7 @@ struct TabBView: View {
                     }//おばけ終了
                     
             
-            ZStack{ //おばけ開始
+            ZStack{ //おばけ２開始
                         
                 Button(action:{ //モノクロのおばけ画像ボタン
                     self.ObakePoint.Obake = 0
@@ -110,7 +100,6 @@ struct TabBView: View {
                                     .resizable()
                                     .frame(width: 180, height: 180)
                                     .cornerRadius(30)
-                            //     .border(Color.red)
                             }
                                     .sheet(isPresented: $isShowingSheet)
                
@@ -118,37 +107,20 @@ struct TabBView: View {
                                 SheetView(isShowingSheet: self.$isShowingSheet)
                             }
                         }//カラー画像終了
-                        
-                    }//おばけ終了
-                
+                    }//おばけ２終了
             }//HStack終了
-        
     }//ループ終了
-                    
-                    
                     
         HStack {          // ポイントカウント
             Text("\(TaskPoint.Point)")
             Text("ポイント獲得")
-            
-           
-            
         }
-        
-    }//VStack
+    }//27行目if分終了
                 
-                
-    //ループ終了
-        
-            
-        
-            
-        }
-        }
-    }
-        
-        
-}
+            }//タイトル画像VStack
+        }//背景ZStack
+    }//scrollView
+}//body終了
     
     
 
@@ -158,5 +130,4 @@ struct TabBView_Previews: PreviewProvider {
             .environmentObject(SjAndCn())
     }//TabBViewシミュレーター
 }
-}
-
+}//struct

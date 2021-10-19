@@ -68,7 +68,6 @@ var body: some View {
                                 SheetView(isShowingSheet: self.$isShowingSheet)
                             }
                         }//カラー画像終了
-                        
                     }//おばけ終了
                     
             
@@ -114,6 +113,10 @@ var body: some View {
         HStack {          // ポイントカウント
             Text("\(TaskPoint.Point)")
             Text("ポイント獲得")
+        }
+    }//VStack
+    //ループ終了
+        }
         }
     }//27行目if分終了
                 

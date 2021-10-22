@@ -122,8 +122,8 @@ var body: some View {
                 
             }//タイトル画像VStack
         }//背景ZStack
-    }//scrollView
-}//body終了
+    //scrollView
+//body終了
     
     
 
@@ -132,5 +132,4 @@ struct TabBView_Previews: PreviewProvider {
         TabBView()
             .environmentObject(SjAndCn())
     }//TabBViewシミュレーター
-}
 }//struct

@@ -170,4 +170,5 @@ struct TabAView_Previews: PreviewProvider {
     }
 }
 //開始クロージャと同じ行にコメントするとシミュレータ表示できないバグ起こる
+//おばけええええええええ
 //TabAViewのシミュレーター終了

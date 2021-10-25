@@ -16,9 +16,11 @@ struct TabAView: View {
     
         @EnvironmentObject var TaskPoint: SjAndCn //タスク完了で得られるポイント
    
-        var body: some View {   //bodyの開始
+        var body: some View {
+            //bodyの開始
 
-            ZStack{ // 背景色指定
+            ZStack{
+                // 背景色指定
                 Color(red: 0.88, green: 0.96, blue:1.0).edgesIgnoringSafeArea(.all)
             VStack{
                 VStack(alignment: .leading) { //テキストとその下の要素を縦に並べる
@@ -28,19 +30,21 @@ struct TabAView: View {
                         .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
                    
                     
-                    HStack {    //入力フィールドとDoneボタンを横に並べる
+                    HStack {
+                        //入力フィールドとDoneボタンを横に並べる
                         TextField("ToDoを入力", text: $NewAlist)   //入力タスクをフィールドに
                             .textFieldStyle(RoundedBorderTextFieldStyle()) //入力フィールドを線で囲む
                         
                         
-                        Button(action: { //Doneボタン
+                        Button(action: {
+                            //Doneボタン
                            self.Alist[i] = NewAlist//配列に要素を追加
                             
                             
                             
                             UIImpactFeedbackGenerator(style: .medium)
                             .impactOccurred()
-                           self.NewAlist = ""   //入力フィールドを空に
+                           self.NewAlist = ""//入力フィールドを空に
                            self.i += 1
                             
                         }) {
@@ -107,8 +111,8 @@ struct TabAView: View {
                        
                
                 }
-                Image("Listicon")
-                    .offset(x: 130, y: 0)
+                Image("ObakeWhite")
+                    .offset(x: 150, y: 80)
                 
                 
                 
@@ -130,7 +134,8 @@ struct TabAView: View {
     
     
     
-    func deleteRow(offsets: IndexSet) {     //リスト削除処理
+    func deleteRow(offsets: IndexSet) {
+        //リスト削除処理
         self.Alist.remove(atOffsets: offsets)   //スライドして削除
         }
     
@@ -164,5 +169,5 @@ struct TabAView_Previews: PreviewProvider {
             .environmentObject(SjAndCn())
     }
 }
-//何でプレビューできへんねーん
+//開始クロージャと同じ行にコメントするとシミュレータ表示できないバグ起こる
 //TabAViewのシミュレーター終了

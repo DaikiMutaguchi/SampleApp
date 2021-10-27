@@ -40,8 +40,6 @@ struct TabAView: View {
                             //Doneボタン
                            self.Alist[i] = NewAlist//配列に要素を追加
                             
-                            
-                            
                             UIImpactFeedbackGenerator(style: .medium)
                             .impactOccurred()
                            self.NewAlist = ""//入力フィールドを空に
@@ -53,19 +51,14 @@ struct TabAView: View {
                                 .scaledToFit()
                                 .frame(width: 30, height: 30)
                               
-                            
                         }.disabled(NewAlist.isEmpty)  //文字が入力されてない時は押せない
                    }    //入力フィールドとDoneボタンの横並び終了
-                    
                     
                }.padding([.leading, .trailing])
                 //テキストからDoneボタンまでの配置終了、両端にスペースを設ける
 
                 ZStack(alignment: .bottomTrailing) {
                 
-                    
-                    
-           
                 List{
                    
                 ForEach(Alist.filter { !$0.isEmpty }, id: \.self){ user in
@@ -76,8 +69,7 @@ struct TabAView: View {
                                       
                                         Image(systemName: "checkmark.square.fill")
                                             .foregroundColor(.green)
-                                    
-                                        
+
                                     } else {
                                         Image(systemName: "square")
                                     }
@@ -87,34 +79,23 @@ struct TabAView: View {
                             .font(.system(size: 20))
                             .foregroundColor(Color.init(red: 0.12, green: 0.20, blue: 0.70))
                         
-                          
                     }
-                     
                    
                 }.onDelete(perform: self.deleteRow)     // 削除処理1呼び出し
                 
                 .listRowBackground(Color.init(red: 1.0, green: 1.0, blue: 1.0))
                 
-                
-                      
-                    
              }.listStyle(InsetGroupedListStyle())
                 .onAppear {
                     UITableView.appearance().backgroundColor = UIColor(red: 0.88, green: 0.96, blue:1.0 ,alpha: 1.0)
                     
-                }
-                .onDisappear {
-                }
+                    }
+                    .onDisappear {
+                    }
                     
-              
-                        
-                       
-               
                 }
                 Image("ObakeWhite")
                     .offset(x: 150, y: 80)
-                
-                
                 
                               //  HStack {          // ポイントカウント
                               //             Text("\(TaskPoint.Point)")
@@ -126,10 +107,8 @@ struct TabAView: View {
                                 
             }
             
-           
             }
-            
-            
+    
        }    //bodyの終了
     
     
@@ -147,7 +126,6 @@ struct TabAView: View {
                 .impactOccurred()
             self.TaskPoint.Point += 1
           
-           
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 //
@@ -159,7 +137,6 @@ struct TabAView: View {
             
         }
     
-        
     }   //TabAView終了
 
 //TabAViewのシミュレーター

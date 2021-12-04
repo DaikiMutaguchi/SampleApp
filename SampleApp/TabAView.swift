@@ -146,6 +146,4 @@ struct TabAView_Previews: PreviewProvider {
             .environmentObject(SjAndCn())
     }
 }
-//開始クロージャと同じ行にコメントするとシミュレータ表示できないバグ起こる
-//おばけええええええええ
 //TabAViewのシミュレーター終了

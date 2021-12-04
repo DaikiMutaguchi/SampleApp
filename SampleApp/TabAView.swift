@@ -128,9 +128,7 @@ struct TabAView: View {
           
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                //
-                //ここに行を削除する処理書いたら完璧じゃない？
-                //
+
                 
                 isChecked = false
             }
